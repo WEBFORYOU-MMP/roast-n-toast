@@ -1,0 +1,94 @@
+"use client"
+
+import * as React from "react"
+import { motion } from "framer-motion"
+import { useTheme } from "next-themes"
+
+const menuItems = [
+  {
+    title: "Italian Cuisine",
+    image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/cbvbcb-1767709258276.jpeg",
+    description: "Authentic pasta, pizza, and fine wines."
+  },
+  {
+    title: "Indian Cuisine",
+    image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/hgff-1767709258239.jpeg",
+    description: "Rich flavors and traditional spices."
+  },
+  {
+    title: "Bar",
+    image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/bv-vb-1767709258377.jpeg",
+    description: "Premium spirits and craft cocktails."
+  }
+]
+
+export function Menu() {
+  const { theme } = useTheme()
+  const isDark = theme === "dark"
+
+  return (
+    <section id="menu" className="py-24 px-6 bg-background transition-colors duration-1000">
+      <div className="max-w-7xl mx-auto text-center">
+        <motion.h2 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className={`text-5xl md:text-7xl mb-16 tracking-[0.2em] font-bold ${isDark ? 'font-display text-white' : 'font-serif text-foreground'}`}
+        >
+          MENU
+        </motion.h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8">
+          {menuItems.map((item, index) => (
+            <motion.div
+              key={item.title}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.2 }}
+              className="flex flex-col items-center group"
+            >
+              <div className="relative mb-8">
+                {/* Rotating border/glow */}
+                <motion.div
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                  className={`absolute -inset-4 rounded-full border-2 border-dashed ${isDark ? 'border-primary/50 shadow-[0_0_30px_rgba(255,49,49,0.3)]' : 'border-primary/20 shadow-xl'}`}
+                />
+                
+                {/* Image Circle */}
+                <motion.div
+                  animate={{ rotate: -360 }}
+                  transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+                  className="relative h-64 w-64 md:h-80 md:w-80 overflow-hidden rounded-full cursor-pointer z-10"
+                >
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    className="h-full w-full bg-cover bg-center transition-transform duration-700"
+                    style={{ backgroundImage: `url("${item.image}")` }}
+                  />
+                  
+                    {/* Overlay on hover */}
+                    <motion.div 
+                      initial={{ opacity: 0 }}
+                      whileHover={{ opacity: 1 }}
+                      className="absolute inset-0 flex items-center justify-center transition-opacity"
+                    >
+                      <span className="text-white font-display tracking-widest text-lg uppercase px-4 py-2 border border-white/50 bg-black/40">Explore</span>
+                    </motion.div>
+                </motion.div>
+              </div>
+
+              <h3 className={`text-2xl md:text-3xl mb-3 tracking-widest uppercase ${isDark ? 'font-display text-gold' : 'font-serif text-foreground'}`}>
+                {item.title}
+              </h3>
+              <p className="text-muted-foreground tracking-wide max-w-[250px]">
+                {item.description}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}

@@ -1,0 +1,90 @@
+"use client"
+
+import * as React from "react"
+import { motion, AnimatePresence } from "framer-motion"
+import { useTheme } from "next-themes"
+import Image from "next/image"
+
+export function Hero() {
+  const { resolvedTheme } = useTheme()
+  const [mounted, setMounted] = React.useState(false)
+
+  React.useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) return <div className="h-screen w-full bg-background" />
+
+  const isDark = resolvedTheme === "dark"
+
+  return (
+    <section className="relative h-screen w-full overflow-hidden">
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={isDark ? "night" : "day"}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 1 }}
+          className="absolute inset-0"
+        >
+            {isDark ? (
+                <div className="h-full w-full relative overflow-hidden bg-black">
+                  <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="absolute inset-0 h-full w-full object-cover opacity-100"
+                  >
+                    <source src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/hero-night.mp4-1767711098930.mp4" type="video/mp4" />
+                  </video>
+                </div>
+            ) : (
+              <div 
+                className="h-full w-full bg-cover bg-center transition-transform duration-[10s] hover:scale-110"
+                style={{ backgroundImage: 'url("https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/WhatsApp-Image-2026-01-06-at-19.47.41-1767709258234.jpeg")' }}
+              />
+            )}
+        </motion.div>
+      </AnimatePresence>
+
+      <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center">
+        <motion.div
+          initial={{ y: 30, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.8 }}
+          className="flex flex-col items-center"
+        >
+            <div className="mb-6 h-32 w-32 relative overflow-hidden rounded-full border-2 border-primary/50 backdrop-blur-sm shadow-xl">
+              <Image
+                src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/55D7DFDB-95A1-4994-9227-044842B9795E-1767713898800.png?width=8000&height=8000&resize=contain"
+                alt="Roast N Toast Logo"
+                fill
+                className="object-cover"
+              />
+            </div>
+          
+            <div className="backdrop-blur-md bg-black/20 dark:bg-white/5 p-8 md:p-12 rounded-2xl border border-white/10 shadow-2xl flex flex-col items-center">
+              <h1 className={`mb-4 text-6xl md:text-8xl tracking-[0.1em] font-bold ${isDark ? 'font-display text-white' : 'font-serif text-foreground'}`}>
+                ROAST N TOAST
+              </h1>
+              
+              <p className={`max-w-xl text-lg md:text-xl uppercase tracking-[0.3em] ${isDark ? 'text-neon-red' : 'text-muted-foreground'}`}>
+                {isDark ? "DJ | Live Music | Entertainment" : "Fine Italian & Indian Cuisine"}
+              </p>
+            </div>
+
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.2 }}
+            className="mt-12"
+          >
+            <div className="h-16 w-[1px] bg-primary animate-bounce mx-auto" />
+          </motion.div>
+        </motion.div>
+      </div>
+    </section>
+  )
+}
