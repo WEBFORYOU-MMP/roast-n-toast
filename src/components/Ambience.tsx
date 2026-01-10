@@ -7,28 +7,41 @@ import { useTheme } from "next-themes"
 const ambienceData = [
   {
     day: {
-      title: "Elegant Dining",
-      text: "Experience the perfect blend of luxury and comfort in our meticulously designed dining spaces. Bright, natural lighting complements the warm, refined atmosphere.",
-      image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/dgfxbx-1767709258239.jpeg"
-    },
+        title: "Elegant Dining",
+        text: "Experience the perfect blend of luxury and comfort in our meticulously designed dining spaces. Bright, natural lighting complements the warm, refined atmosphere.",
+        image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/N1-1768069191275.jpeg"
+      },
     night: {
       title: "Nightlife Electrified",
       text: "As the sun sets, Roast N Toast transforms into Hyderabad's premier nightlife destination. High-energy beats, neon lights, and an electrifying atmosphere await.",
       image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/vxcgdxhb-1767709258232.jpeg"
     }
   },
-  {
-    day: {
-      title: "Refined Flavors",
-      text: "Our culinary artisans bring you the finest Italian and Indian cuisine, prepared with passion and served with elegance.",
-      image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/vcvc-1767709258240.jpeg"
+    {
+      day: {
+        title: "Refined Flavours",
+        text: "Our culinary artisans bring you the finest Italian and Indian cuisine, prepared with passion and served with elegance.",
+        image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/vcvc-1767709258240.jpeg"
+      },
+      night: {
+        title: "Premium Bar Experience",
+        text: "Indulge in our curated selection of fine wines, craft cocktails, and premium spirits. Our bartenders are masters of mixology, creating liquid art for your pleasure.",
+        image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/bfbb-v-1767709258234.jpeg"
+      }
     },
-    night: {
-      title: "Premium Bar Experience",
-      text: "Indulge in our curated selection of fine wines, craft cocktails, and premium spirits. Our bartenders are masters of mixology, creating liquid art for your pleasure.",
-      image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/bfbb-v-1767709258234.jpeg"
+    {
+      day: {
+        title: "Gourmet Platters",
+        text: "Experience the art of sharing with our exquisitely curated platters, featuring a premium selection of artisanal cheeses, seasonal fruits, and savory delights.",
+        image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/PLATTERS-1768069833489.jpg"
+      },
+      night: {
+        title: "Signature Sharing",
+        text: "Elevate your evening with our signature sharing boards, perfectly crafted to complement your favorite wines and cocktails in our sophisticated lounge.",
+        image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/PLATTERS-1768069833489.jpg"
+      }
     }
-  }
+
 ]
 
 export function Ambience() {
@@ -72,18 +85,6 @@ export function Ambience() {
                 <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-lg mb-12">
                   {content.text}
                 </p>
-                
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className={`px-8 py-4 border transition-all duration-300 ${
-                    isDark 
-                    ? 'border-gold text-gold hover:bg-gold hover:text-black shadow-[0_0_15px_rgba(212,175,55,0.2)]' 
-                    : 'border-primary text-primary hover:bg-primary hover:text-white'
-                  }`}
-                >
-                  LEARN MORE
-                </motion.button>
               </motion.div>
             </div>
           </div>
@@ -102,7 +103,7 @@ export function Ambience() {
               "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/bv-vb-1767709258377.jpeg",
               "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/WhatsApp-Image-2026-01-06-at-19.47.42-1767709258235.jpeg",
               "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/vxcgdxhb-1767709258232.jpeg",
-              "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/dgfxbx-1767709258239.jpeg"
+                "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/N1-1768069191275.jpeg"
             ].map((img, i) => (
                 <motion.div 
                   key={i}

@@ -51,7 +51,6 @@ export function Navbar() {
             <Link href="/events" className="hover:text-primary transition-colors">Events</Link>
             <Link href="/offers" className="hover:text-primary transition-colors">Offers</Link>
             <Link href="/music-and-socials" className="hover:text-primary transition-colors">Music & Socials</Link>
-            <Link href="/#contact" className="hover:text-primary transition-colors">Contact</Link>
           </div>
           <div className="flex items-center gap-4">
             <Link 
