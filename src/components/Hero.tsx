@@ -43,7 +43,7 @@ export function Hero() {
             ) : (
               <div 
                 className="h-full w-full bg-cover bg-center transition-transform duration-[10s] hover:scale-110"
-                style={{ backgroundImage: 'url("https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/WhatsApp-Image-2026-01-06-at-19.47.41-1767709258234.jpeg")' }}
+                  style={{ backgroundImage: 'url("https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/mhi-1768062257429.png?width=8000&height=8000&resize=contain")' }}
               />
             )}
         </motion.div>
@@ -65,12 +65,16 @@ export function Hero() {
               />
             </div>
           
-            <div className="backdrop-blur-md bg-black/20 dark:bg-white/5 p-8 md:p-12 rounded-2xl border border-white/10 shadow-2xl flex flex-col items-center">
-              <h1 className={`mb-4 text-6xl md:text-8xl tracking-[0.1em] font-bold ${isDark ? 'font-display text-white' : 'font-serif text-foreground'}`}>
-                ROAST N TOAST
-              </h1>
-              
-              <p className={`max-w-xl text-lg md:text-xl uppercase tracking-[0.3em] ${isDark ? 'text-neon-red' : 'text-muted-foreground'}`}>
+              <div className="backdrop-blur-md bg-black/20 dark:bg-white/5 p-8 md:p-12 rounded-2xl border border-white/10 shadow-2xl flex flex-col items-center">
+                <h1 className="mb-4 text-6xl md:text-8xl font-bold font-display flex items-center justify-center flex-wrap gap-x-4 md:gap-x-8">
+                  <span style={{ color: '#E0B12D' }}>ROAST</span>
+                  <span className="inline-flex items-center justify-center rounded-full border-[6px] md:border-[10px] border-[#1F7A2E] text-[#1F7A2E] w-[1.1em] h-[1.1em] text-[0.8em] leading-none shrink-0">
+                    N
+                  </span>
+                  <span style={{ color: '#B01616' }}>TOAST</span>
+                </h1>
+                
+                <p className={`max-w-xl text-lg md:text-xl uppercase tracking-[0.3em] ${isDark ? 'text-neon-red' : 'text-muted-foreground'}`}>
                 {isDark ? "DJ | Live Music | Entertainment" : "Fine Italian & Indian Cuisine"}
               </p>
             </div>
