@@ -14,7 +14,7 @@ const ambienceData = [
     night: {
       title: "Nightlife Electrified",
       text: "As the sun sets, Roast N Toast transforms into Hyderabad's premier nightlife destination. High-energy beats, neon lights, and an electrifying atmosphere await.",
-      image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/vxcgdxhb-1767709258232.jpeg"
+      image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/night-electrified-1768074449884.jpeg?width=8000&height=8000&resize=contain"
     }
   },
     {
@@ -26,7 +26,7 @@ const ambienceData = [
       night: {
         title: "Premium Bar Experience",
         text: "Indulge in our curated selection of fine wines, craft cocktails, and premium spirits. Our bartenders are masters of mixology, creating liquid art for your pleasure.",
-        image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/bfbb-v-1767709258234.jpeg"
+        image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/cheers-1768074450059.png?width=8000&height=8000&resize=contain"
       }
     },
         {
@@ -35,11 +35,11 @@ const ambienceData = [
             text: "Experience the art of sharing with our exquisitely curated platters, featuring a premium selection of artisanal cheeses, seasonal fruits, and savory delights.",
             image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/PLATTERS-1768069833489.jpg"
           },
-      night: {
-        title: "Signature Sharing",
-        text: "Elevate your evening with our signature sharing boards, perfectly crafted to complement your favorite wines and cocktails in our sophisticated lounge.",
-        image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/PLATTERS-1768069833489.jpg"
-      }
+        night: {
+          title: "Signature Sharing",
+          text: "Elevate your evening with our signature sharing boards, perfectly crafted to complement your favorite wines and cocktails in our sophisticated lounge.",
+          image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/non-veg-platter-500x500-1768074632795.webp?width=8000&height=8000&resize=contain"
+        }
     }
 ]
 
