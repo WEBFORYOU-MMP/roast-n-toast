@@ -74,9 +74,9 @@ export function Hero() {
                   <span style={{ color: '#B01616' }}>TOAST</span>
                 </h1>
                 
-                <p className={`max-w-xl text-lg md:text-xl uppercase tracking-[0.3em] ${isDark ? 'text-neon-red' : 'text-muted-foreground'}`}>
-                {isDark ? "DJ | Live Music | Entertainment" : "Fine Continental & Indian Cuisine"}
-              </p>
+                  <p className={`max-w-xl text-lg md:text-xl uppercase tracking-[0.3em] ${isDark ? 'text-neon-red' : 'text-muted-foreground'}`}>
+                  {isDark ? "CLUB | KITCHEN" : "Fine Continental & Indian Cuisine"}
+                </p>
             </div>
 
           <motion.div 

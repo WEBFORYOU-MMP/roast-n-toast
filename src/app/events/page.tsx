@@ -50,11 +50,16 @@ export default function EventsPage() {
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
-                <span className="text-white font-display tracking-widest uppercase border border-white/50 px-6 py-2 backdrop-blur-sm">
-                  View Event
-                </span>
-              </div>
+                <a 
+                  href="https://www.instagram.com/roastntoasthyd/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center"
+                >
+                  <span className="text-white font-display tracking-widest uppercase border border-white/50 px-6 py-2 backdrop-blur-sm">
+                    View Event
+                  </span>
+                </a>
             </motion.div>
           ))}
         </div>

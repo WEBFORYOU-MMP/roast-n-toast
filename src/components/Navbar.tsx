@@ -46,12 +46,11 @@ export function Navbar() {
       </Link>
 
         <div className="flex items-center gap-8">
-          <div className="hidden md:flex items-center gap-6 text-sm uppercase tracking-widest font-medium">
-            <Link href="/#menu" className="hover:text-primary transition-colors">Menu</Link>
-            <Link href="/events" className="hover:text-primary transition-colors">Events</Link>
-            <Link href="/offers" className="hover:text-primary transition-colors">Offers</Link>
-            <Link href="/music-and-socials" className="hover:text-primary transition-colors">Music & Socials</Link>
-          </div>
+            <div className="hidden md:flex items-center gap-6 text-sm uppercase tracking-widest font-medium">
+              <Link href="/#menu" className="hover:text-primary transition-colors">Menu</Link>
+              <Link href="/events" className="hover:text-primary transition-colors">Events</Link>
+              <Link href="/offers" className="hover:text-primary transition-colors">Offers</Link>
+            </div>
           <div className="flex items-center gap-4">
             <Link 
               href="https://www.google.com/viewer/chooseprovider?mid=/g/11q3z8s108&g2lbs=AIBNGdWva29D1BZGmFfX3IzOeQp9ievcWKu11OEHFFd-ZiIjd2LSRnWg7fprGnDSbleihDAMr3bA44MEOo3iWYQ3yaTLKfNiNbm88ctnvNnNqn0dMgyYesY%3D&hl=en-IN&gl=in&fo_m=MfohQo559jFvMUOzJVpjPL1YMfZ3bInYwBDuMfaXTPp5KXh-&utm_source=tactile&gei=5IhiaeekCc-e4-EPguDS2Ak&ei=5IhiaeekCc-e4-EPguDS2Ak&fo_s=OA&opi=79508299&orderType=1&ebb=1&cs=0&foub=mcpp"
