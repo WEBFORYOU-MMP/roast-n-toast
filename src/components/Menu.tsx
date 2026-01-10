@@ -7,17 +7,17 @@ import { useTheme } from "next-themes"
 const menuItems = [
   {
     title: "Drinks & Shakes",
-    image: "https://images.unsplash.com/photo-1574096079513-d8259312b785?q=80&w=2000&auto=format&fit=crop",
+    image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/image-1768066392523.png?width=8000&height=8000&resize=contain",
     description: "Premium spirits, craft cocktails, and artisanal shakes."
   },
   {
     title: "Food",
-    image: "https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=2000&auto=format&fit=crop",
+    image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/FOOD-1768066425606.jpeg?width=8000&height=8000&resize=contain",
     description: "Exquisite fine dining featuring global culinary delights."
   },
   {
     title: "Ambiance",
-    image: "https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?q=80&w=2000&auto=format&fit=crop",
+    image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/AMBIANCE-1768066425853.png?width=8000&height=8000&resize=contain",
     description: "Immerse yourself in our royal lounge and vibrant nightlife."
   }
 ]

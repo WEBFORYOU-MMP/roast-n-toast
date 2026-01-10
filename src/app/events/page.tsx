@@ -11,7 +11,8 @@ const eventImages = [
   "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/Screenshot-2026-01-10-at-10.12.24-PM-1768065674573.png?width=8000&height=8000&resize=contain",
   "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/Screenshot-2026-01-10-at-10.13.19-PM-1768065674169.png?width=8000&height=8000&resize=contain",
   "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/Screenshot-2026-01-10-at-10.13.40-PM-1768065673924.png?width=8000&height=8000&resize=contain",
-  "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/Screenshot-2026-01-10-at-10.13.56-PM-1768065674001.png?width=8000&height=8000&resize=contain"
+  "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/Screenshot-2026-01-10-at-10.13.56-PM-1768065674001.png?width=8000&height=8000&resize=contain",
+  "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/Screenshot-2026-01-10-at-10.55.40-PM-1768065972119.png?width=8000&height=8000&resize=contain"
 ]
 
 export default function EventsPage() {
