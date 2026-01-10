@@ -92,31 +92,40 @@ export function Ambience() {
         )
       })}
 
-      {/* Bar & Drinks Visual Focus for Night Mode */}
-        {isDark && (
-          <section className="py-24 px-6 bg-black">
-             <motion.div 
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              className="grid grid-cols-2 md:grid-cols-4 gap-4"
-            >
-              {[
-                "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/bv-vb-1767709258377.jpeg",
-                "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/WhatsApp-Image-2026-01-06-at-19.47.42-1767709258235.jpeg",
-                "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/vxcgdxhb-1767709258232.jpeg",
-                  "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/N1-1768069191275.jpeg"
-              ].map((img, i) => (
-                  <motion.div 
-                    key={i}
-                    whileHover={{ y: -10 }}
-                    className="h-64 md:h-96 rounded-lg overflow-hidden relative group"
-                  >
-                    <img src={img} alt="Drink" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                  </motion.div>
-              ))}
-            </motion.div>
-          </section>
-        )}
+        {/* Bar & Drinks Visual Focus for Night Mode */}
+          {isDark && (
+            <section className="py-24 overflow-hidden bg-black">
+              <div className="flex">
+                <motion.div 
+                  animate={{ x: ["0%", "-50%"] }}
+                  transition={{ 
+                    duration: 20,
+                    repeat: Infinity,
+                    ease: "linear"
+                  }}
+                  className="flex gap-4 px-2"
+                >
+                  {[...Array(2)].map((_, idx) => (
+                    <React.Fragment key={idx}>
+                      {[
+                        "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/bv-vb-1767709258377.jpeg",
+                        "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/WhatsApp-Image-2026-01-06-at-19.47.42-1767709258235.jpeg",
+                        "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/vxcgdxhb-1767709258232.jpeg",
+                        "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/N1-1768069191275.jpeg"
+                      ].map((img, i) => (
+                        <div 
+                          key={`${idx}-${i}`}
+                          className="w-[300px] md:w-[400px] h-64 md:h-96 rounded-lg overflow-hidden relative group flex-shrink-0"
+                        >
+                          <img src={img} alt="Drink" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                        </div>
+                      ))}
+                    </React.Fragment>
+                  ))}
+                </motion.div>
+              </div>
+            </section>
+          )}
 
         {!isDark && (
           <section className="py-24 px-6 bg-cream/30 border-t border-primary/10">
@@ -136,28 +145,37 @@ export function Ambience() {
                 <div className="h-1 w-20 bg-primary/30 mx-auto" />
               </motion.div>
               
-                <motion.div 
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-                >
-                  {[
-                    "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/WhatsApp-Image-2026-01-09-at-23.29.51-1-1768072767209.jpeg",
-                    "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/WhatsApp-Image-2026-01-09-at-23.29.51-2-1768072767986.jpeg",
-                    "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/WhatsApp-Image-2026-01-09-at-23.29.51-3-1768072767518.jpeg",
-                    "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/WhatsApp-Image-2026-01-09-at-23.29.51-4-1768072768179.jpeg",
-                    "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/WhatsApp-Image-2026-01-09-at-23.29.51-5-1768072768336.jpeg",
-                    "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/WhatsApp-Image-2026-01-09-at-23.29.51-1768072926653.jpeg"
-                  ].map((img, i) => (
-                    <motion.div 
-                      key={i}
-                      whileHover={{ y: -10 }}
-                      className="aspect-[16/9] rounded-xl overflow-hidden shadow-lg border border-primary/10 bg-white"
-                    >
-                      <img src={img} alt="Host your event" className="h-full w-full object-contain" />
-                    </motion.div>
-                ))}
-              </motion.div>
+                <div className="flex overflow-hidden py-4">
+                  <motion.div 
+                    animate={{ x: ["0%", "-50%"] }}
+                    transition={{ 
+                      duration: 40,
+                      repeat: Infinity,
+                      ease: "linear"
+                    }}
+                    className="flex gap-6 px-4"
+                  >
+                    {[...Array(2)].map((_, idx) => (
+                      <React.Fragment key={idx}>
+                        {[
+                          "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/WhatsApp-Image-2026-01-09-at-23.29.51-1-1768072767209.jpeg",
+                          "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/WhatsApp-Image-2026-01-09-at-23.29.51-2-1768072767986.jpeg",
+                          "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/WhatsApp-Image-2026-01-09-at-23.29.51-3-1768072767518.jpeg",
+                          "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/WhatsApp-Image-2026-01-09-at-23.29.51-4-1768072768179.jpeg",
+                          "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/WhatsApp-Image-2026-01-09-at-23.29.51-5-1768072768336.jpeg",
+                          "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/WhatsApp-Image-2026-01-09-at-23.29.51-1768072926653.jpeg"
+                        ].map((img, i) => (
+                          <div 
+                            key={`${idx}-${i}`}
+                            className="w-[400px] md:w-[600px] aspect-[16/9] rounded-xl overflow-hidden shadow-lg border border-primary/10 bg-white flex-shrink-0"
+                          >
+                            <img src={img} alt="Host your event" className="h-full w-full object-contain" />
+                          </div>
+                        ))}
+                      </React.Fragment>
+                    ))}
+                  </motion.div>
+                </div>
             </div>
           </section>
         )}
