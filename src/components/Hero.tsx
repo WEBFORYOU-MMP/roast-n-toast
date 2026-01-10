@@ -65,7 +65,7 @@ export function Hero() {
               />
             </div>
           
-              <div className="backdrop-blur-md bg-black/20 dark:bg-white/5 p-8 md:p-12 rounded-2xl border border-white/10 shadow-2xl flex flex-col items-center">
+              <div className="flex flex-col items-center">
                 <h1 className="mb-4 text-6xl md:text-8xl font-bold font-display flex items-center justify-center flex-wrap gap-x-4 md:gap-x-8">
                   <span style={{ color: '#E0B12D' }}>ROAST</span>
                   <span className="inline-flex items-center justify-center rounded-full border-[6px] md:border-[10px] border-[#1F7A2E] text-[#1F7A2E] w-[1.1em] h-[1.1em] text-[0.8em] leading-none shrink-0">
@@ -74,9 +74,11 @@ export function Hero() {
                   <span style={{ color: '#B01616' }}>TOAST</span>
                 </h1>
                 
-                  <p className={`max-w-xl text-lg md:text-xl uppercase tracking-[0.3em] ${isDark ? 'text-neon-red' : 'text-muted-foreground'}`}>
-                  {isDark ? "CLUB | KITCHEN" : "Fine Continental & Indian Cuisine"}
-                </p>
+                  <div className="mt-4 px-6 py-2 bg-black/50 backdrop-blur-sm rounded-full border border-white/10">
+                    <p className={`max-w-xl text-lg md:text-xl uppercase tracking-[0.3em] ${isDark ? 'text-neon-red' : 'text-muted-foreground'}`}>
+                      {isDark ? "CLUB | KITCHEN" : "Fine Continental & Indian Cuisine"}
+                    </p>
+                  </div>
             </div>
 
           <motion.div 
