@@ -6,19 +6,19 @@ import { useTheme } from "next-themes"
 
 const menuItems = [
   {
-    title: "Italian Cuisine",
-    image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/cbvbcb-1767709258276.jpeg",
-    description: "Authentic pasta, pizza, and fine wines."
+    title: "Drinks & Shakes",
+    image: "https://images.unsplash.com/photo-1574096079513-d8259312b785?q=80&w=2000&auto=format&fit=crop",
+    description: "Premium spirits, craft cocktails, and artisanal shakes."
   },
   {
-    title: "Indian Cuisine",
-    image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/hgff-1767709258239.jpeg",
-    description: "Rich flavors and traditional spices."
+    title: "Food",
+    image: "https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=2000&auto=format&fit=crop",
+    description: "Exquisite fine dining featuring global culinary delights."
   },
   {
-    title: "Bar",
-    image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/bv-vb-1767709258377.jpeg",
-    description: "Premium spirits and craft cocktails."
+    title: "Ambiance",
+    image: "https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?q=80&w=2000&auto=format&fit=crop",
+    description: "Immerse yourself in our royal lounge and vibrant nightlife."
   }
 ]
 

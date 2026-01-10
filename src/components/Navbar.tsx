@@ -45,14 +45,26 @@ export function Navbar() {
         </motion.div>
       </Link>
 
-      <div className="flex items-center gap-8">
-        <div className="hidden md:flex items-center gap-6 text-sm uppercase tracking-widest font-medium">
-          <Link href="#menu" className="hover:text-primary transition-colors">Menu</Link>
-          <Link href="#ambience" className="hover:text-primary transition-colors">Ambience</Link>
-          <Link href="#contact" className="hover:text-primary transition-colors">Contact</Link>
+        <div className="flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6 text-sm uppercase tracking-widest font-medium">
+            <Link href="/#menu" className="hover:text-primary transition-colors">Menu</Link>
+            <Link href="/events" className="hover:text-primary transition-colors">Events</Link>
+            <Link href="/offers" className="hover:text-primary transition-colors">Offers</Link>
+            <Link href="/music-and-socials" className="hover:text-primary transition-colors">Music & Socials</Link>
+            <Link href="/#contact" className="hover:text-primary transition-colors">Contact</Link>
+          </div>
+          <div className="flex items-center gap-4">
+            <Link 
+              href="https://www.google.com/viewer/chooseprovider?mid=/g/11q3z8s108&g2lbs=AIBNGdWva29D1BZGmFfX3IzOeQp9ievcWKu11OEHFFd-ZiIjd2LSRnWg7fprGnDSbleihDAMr3bA44MEOo3iWYQ3yaTLKfNiNbm88ctnvNnNqn0dMgyYesY%3D&hl=en-IN&gl=in&fo_m=MfohQo559jFvMUOzJVpjPL1YMfZ3bInYwBDuMfaXTPp5KXh-&utm_source=tactile&gei=5IhiaeekCc-e4-EPguDS2Ak&ei=5IhiaeekCc-e4-EPguDS2Ak&fo_s=OA&opi=79508299&orderType=1&ebb=1&cs=0&foub=mcpp"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#E0B12D] text-black px-6 py-2 rounded-full font-bold uppercase tracking-widest text-xs hover:bg-[#E0B12D]/90 transition-all shadow-[0_0_15px_rgba(224,177,45,0.3)] hover:scale-105 active:scale-95 whitespace-nowrap"
+            >
+              Order Now
+            </Link>
+            <ThemeToggle />
+          </div>
         </div>
-        <ThemeToggle />
-      </div>
     </motion.nav>
   )
 }

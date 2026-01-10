@@ -75,7 +75,7 @@ export function Hero() {
                 </h1>
                 
                 <p className={`max-w-xl text-lg md:text-xl uppercase tracking-[0.3em] ${isDark ? 'text-neon-red' : 'text-muted-foreground'}`}>
-                {isDark ? "DJ | Live Music | Entertainment" : "Fine Italian & Indian Cuisine"}
+                {isDark ? "DJ | Live Music | Entertainment" : "Fine Continental & Indian Cuisine"}
               </p>
             </div>
 
