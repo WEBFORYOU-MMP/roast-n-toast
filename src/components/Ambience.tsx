@@ -92,54 +92,69 @@ export function Ambience() {
         )
       })}
 
-      {/* Bar & Drinks Visual Focus for Night Mode */}
-        {isDark && (
-          <section className="py-24 px-6 bg-black">
-             <motion.div 
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              className="grid grid-cols-2 md:grid-cols-4 gap-4"
-            >
-              {[
-                "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/bv-vb-1767709258377.jpeg",
-                "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/WhatsApp-Image-2026-01-06-at-19.47.42-1767709258235.jpeg",
-                "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/vxcgdxhb-1767709258232.jpeg",
-                  "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/N1-1768069191275.jpeg"
-              ].map((img, i) => (
-                  <motion.div 
-                    key={i}
-                    whileHover={{ y: -10 }}
-                    className="h-64 md:h-96 rounded-lg overflow-hidden relative group"
-                  >
-                    <img src={img} alt="Drink" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                  </motion.div>
-              ))}
-            </motion.div>
-          </section>
-        )}
+        {/* Bar & Drinks Visual Focus for Night Mode */}
+          {isDark && (
+            <section className="py-24 bg-black overflow-hidden">
+               <div className="flex whitespace-nowrap">
+                 <motion.div 
+                  animate={{ x: [0, "-50%"] }}
+                  transition={{ 
+                    duration: 30,
+                    repeat: Infinity,
+                    ease: "linear"
+                  }}
+                  className="flex gap-4 px-2"
+                >
+                  {[
+                    "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/bv-vb-1767709258377.jpeg",
+                    "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/WhatsApp-Image-2026-01-06-at-19.47.42-1767709258235.jpeg",
+                    "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/vxcgdxhb-1767709258232.jpeg",
+                    "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/N1-1768069191275.jpeg",
+                    "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/bv-vb-1767709258377.jpeg",
+                    "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/WhatsApp-Image-2026-01-06-at-19.47.42-1767709258235.jpeg",
+                    "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/vxcgdxhb-1767709258232.jpeg",
+                    "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/N1-1768069191275.jpeg"
+                  ].map((img, i) => (
+                      <div 
+                        key={i}
+                        className="h-64 md:h-96 w-[300px] md:w-[450px] flex-shrink-0 rounded-lg overflow-hidden relative group"
+                      >
+                        <img src={img} alt="Drink" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                      </div>
+                  ))}
+                </motion.div>
+              </div>
+            </section>
+          )}
 
-        {!isDark && (
-          <section className="py-24 px-6 bg-cream/30 border-t border-primary/10">
-            <div className="max-w-7xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="text-center mb-16"
-              >
-                <span className="text-primary font-display tracking-[0.4em] uppercase text-sm mb-4 block">
-                  Events & Celebrations
-                </span>
-                <h2 className="text-4xl md:text-5xl font-serif text-foreground mb-4">
-                  Fun Place To Host
-                </h2>
-                <div className="h-1 w-20 bg-primary/30 mx-auto" />
-              </motion.div>
-              
+          {!isDark && (
+            <section className="py-24 bg-cream/30 border-t border-primary/10 overflow-hidden">
+              <div className="max-w-7xl mx-auto px-6 mb-16">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className="text-center"
+                >
+                  <span className="text-primary font-display tracking-[0.4em] uppercase text-sm mb-4 block">
+                    Events & Celebrations
+                  </span>
+                  <h2 className="text-4xl md:text-5xl font-serif text-foreground mb-4">
+                    Fun Place To Host
+                  </h2>
+                  <div className="h-1 w-20 bg-primary/30 mx-auto" />
+                </motion.div>
+              </div>
+                
+              <div className="flex whitespace-nowrap">
                 <motion.div 
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+                  animate={{ x: [0, "-50%"] }}
+                  transition={{ 
+                    duration: 40,
+                    repeat: Infinity,
+                    ease: "linear"
+                  }}
+                  className="flex gap-6 px-3"
                 >
                   {[
                     "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/WhatsApp-Image-2026-01-09-at-23.29.51-1-1768072767209.jpeg",
@@ -147,20 +162,25 @@ export function Ambience() {
                     "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/WhatsApp-Image-2026-01-09-at-23.29.51-3-1768072767518.jpeg",
                     "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/WhatsApp-Image-2026-01-09-at-23.29.51-4-1768072768179.jpeg",
                     "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/WhatsApp-Image-2026-01-09-at-23.29.51-5-1768072768336.jpeg",
+                    "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/WhatsApp-Image-2026-01-09-at-23.29.51-1768072926653.jpeg",
+                    "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/WhatsApp-Image-2026-01-09-at-23.29.51-1-1768072767209.jpeg",
+                    "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/WhatsApp-Image-2026-01-09-at-23.29.51-2-1768072767986.jpeg",
+                    "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/WhatsApp-Image-2026-01-09-at-23.29.51-3-1768072767518.jpeg",
+                    "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/WhatsApp-Image-2026-01-09-at-23.29.51-4-1768072768179.jpeg",
+                    "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/WhatsApp-Image-2026-01-09-at-23.29.51-5-1768072768336.jpeg",
                     "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/WhatsApp-Image-2026-01-09-at-23.29.51-1768072926653.jpeg"
                   ].map((img, i) => (
-                    <motion.div 
+                    <div 
                       key={i}
-                      whileHover={{ y: -10 }}
-                      className="aspect-[16/9] rounded-xl overflow-hidden shadow-lg border border-primary/10 bg-white"
+                      className="aspect-[16/9] h-64 md:h-80 flex-shrink-0 rounded-xl overflow-hidden shadow-lg border border-primary/10 bg-white"
                     >
                       <img src={img} alt="Host your event" className="h-full w-full object-contain" />
-                    </motion.div>
-                ))}
-              </motion.div>
-            </div>
-          </section>
-        )}
+                    </div>
+                  ))}
+                </motion.div>
+              </div>
+            </section>
+          )}
     </section>
   )
 }
