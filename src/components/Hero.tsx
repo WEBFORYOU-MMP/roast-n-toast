@@ -56,7 +56,7 @@ export function Hero() {
           transition={{ delay: 0.5, duration: 0.8 }}
           className="flex flex-col items-center"
         >
-            <div className="mb-6 h-32 w-32 relative overflow-hidden rounded-full border-2 border-primary/50 backdrop-blur-sm shadow-xl">
+            <div className="mb-6 h-24 w-24 md:h-32 md:w-32 relative overflow-hidden rounded-full border-2 border-primary/50 backdrop-blur-sm shadow-xl">
               <Image
                 src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/55D7DFDB-95A1-4994-9227-044842B9795E-1767713898800.png?width=8000&height=8000&resize=contain"
                 alt="Roast N Toast Logo"
@@ -65,23 +65,24 @@ export function Hero() {
               />
             </div>
             
-            <h1 className="mb-8 text-6xl md:text-8xl font-bold font-display flex items-center justify-center flex-wrap gap-x-4 md:gap-x-8">
+            <h1 className="mb-8 text-4xl sm:text-6xl md:text-8xl font-bold font-display flex items-center justify-center flex-wrap gap-x-4 md:gap-x-8">
               <span style={{ color: '#E0B12D' }}>ROAST</span>
-              <span className="inline-flex items-center justify-center rounded-full border-[6px] md:border-[10px] border-[#1F7A2E] text-[#1F7A2E] w-[1.1em] h-[1.1em] text-[0.8em] leading-none shrink-0">
+              <span className="inline-flex items-center justify-center rounded-full border-[4px] md:border-[10px] border-[#1F7A2E] text-[#1F7A2E] w-[1.1em] h-[1.1em] text-[0.8em] leading-none shrink-0">
                 N
               </span>
               <span style={{ color: '#B01616' }}>TOAST</span>
             </h1>
 
-            <div className={`px-8 py-4 md:px-12 md:py-6 rounded-xl backdrop-blur-md shadow-lg transition-all duration-500 ${
+            <div className={`px-4 py-3 md:px-12 md:py-6 rounded-xl backdrop-blur-md shadow-lg transition-all duration-500 ${
               isDark 
                 ? 'bg-black/40 border border-white/10' 
                 : 'bg-white/40 border border-black/5'
             }`}>
-              <p className={`max-w-xl text-lg md:text-xl uppercase tracking-[0.3em] ${isDark ? 'text-neon-red' : 'text-muted-foreground'}`}>
+              <p className={`max-w-xl text-sm sm:text-lg md:text-xl uppercase tracking-[0.2em] md:tracking-[0.3em] ${isDark ? 'text-neon-red' : 'text-muted-foreground'}`}>
                 {isDark ? "CLUB | KITCHEN" : "Fine Continental & Indian Cuisine"}
               </p>
             </div>
+
 
             <motion.div 
             initial={{ opacity: 0 }}

@@ -70,7 +70,7 @@ export function Ambience() {
             </div>
 
             {/* Text Side */}
-            <div className={`w-full md:w-1/2 flex flex-col justify-center px-12 py-24 md:px-24 ${isDark ? 'bg-card' : 'bg-cream/30'}`}>
+            <div className={`w-full md:w-1/2 flex flex-col justify-center px-8 py-16 md:px-24 ${isDark ? 'bg-card' : 'bg-cream/30'}`}>
               <motion.div
                 initial={{ opacity: 0, x: isEven ? 50 : -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -80,10 +80,10 @@ export function Ambience() {
                 <span className="text-primary font-display tracking-[0.4em] uppercase text-sm mb-4 block">
                   {isDark ? "The Night" : "The Day"}
                 </span>
-                <h3 className={`text-4xl md:text-6xl mb-8 tracking-wider ${isDark ? 'font-display text-white' : 'font-serif text-foreground'}`}>
+                <h3 className={`text-3xl md:text-6xl mb-6 md:mb-8 tracking-wider ${isDark ? 'font-display text-white' : 'font-serif text-foreground'}`}>
                   {content.title}
                 </h3>
-                <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-lg mb-12">
+                <p className="text-base md:text-xl text-muted-foreground leading-relaxed max-w-lg mb-8 md:mb-12">
                   {content.text}
                 </p>
               </motion.div>
