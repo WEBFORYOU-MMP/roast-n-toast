@@ -50,6 +50,14 @@ export function Navbar() {
               <Link href="/#menu" className="hover:text-primary transition-colors">Menu</Link>
               <Link href="/events" className="hover:text-primary transition-colors">Events</Link>
               <Link href="/offers" className="hover:text-primary transition-colors">Offers</Link>
+              <a 
+                href="https://www.instagram.com/roastntoasthyd/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="hover:text-primary transition-colors"
+              >
+                MUSIC SOCIALS
+              </a>
             </div>
           <div className="flex items-center gap-4">
             <Link 
@@ -62,7 +70,7 @@ export function Navbar() {
             </Link>
             <ThemeToggle />
           </div>
-        </div>
-    </motion.nav>
+          </div>
+      </motion.nav>
   )
 }

@@ -33,11 +33,11 @@ const menuItemsNight = [
     image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/image-1768066392523.png?width=8000&height=8000&resize=contain",
     description: "Premium spirits, craft cocktails, and signature drinks."
   },
-    {
-      title: "Music",
-      image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/dj-mix-resized-1768072514624.jpg?width=8000&height=8000&resize=contain",
-      description: "Live DJ sets and electrifying beats all night long."
-    },
+  {
+    title: "Music",
+    image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/Screenshot-2026-01-10-at-10.13.40-PM-1768065673924.png?width=8000&height=8000&resize=contain",
+    description: "Live DJ sets and electrifying beats all night long."
+  },
   {
     title: "Ambiance",
     image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/AMBIANCE-1768066425853.png?width=8000&height=8000&resize=contain",

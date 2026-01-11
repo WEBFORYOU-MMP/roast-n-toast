@@ -48,7 +48,7 @@ export function Footer() {
           <h4 className={`text-lg mb-6 tracking-widest uppercase ${isDark ? 'text-gold' : 'text-primary'}`}>Contact Us</h4>
           <ul className="flex flex-col gap-3 text-sm text-muted-foreground">
             <li className="flex items-center gap-2"><MapPin className="w-4 h-4" /> Madinaguda, Hyderabad</li>
-            <li className="flex items-center gap-2"><Phone className="w-4 h-4" />+91 82979 77877</li>
+            <li className="flex items-center gap-2"><Phone className="w-4 h-4" /> +91 98765 43210</li>
             <li className="flex items-center gap-2"><Mail className="w-4 h-4" /> info@roastntoast.com</li>
           </ul>
         </div>

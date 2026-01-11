@@ -14,7 +14,7 @@ const ambienceData = [
     night: {
       title: "Nightlife Electrified",
       text: "As the sun sets, Roast N Toast transforms into Hyderabad's premier nightlife destination. High-energy beats, neon lights, and an electrifying atmosphere await.",
-      image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/night-electrified-1768074449884.jpeg?width=8000&height=8000&resize=contain"
+      image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/vxcgdxhb-1767709258232.jpeg"
     }
   },
     {
@@ -26,21 +26,30 @@ const ambienceData = [
       night: {
         title: "Premium Bar Experience",
         text: "Indulge in our curated selection of fine wines, craft cocktails, and premium spirits. Our bartenders are masters of mixology, creating liquid art for your pleasure.",
-        image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/cheers-1768074450059.png?width=8000&height=8000&resize=contain"
+        image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/bfbb-v-1767709258234.jpeg"
       }
     },
-        {
-          day: {
-            title: "Gourmet Platters",
-            text: "Experience the art of sharing with our exquisitely curated platters, featuring a premium selection of artisanal cheeses, seasonal fruits, and savory delights.",
-            image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/PLATTERS-1768069833489.jpg"
-          },
-        night: {
-          title: "Signature Sharing",
-          text: "Elevate your evening with our signature sharing boards, perfectly crafted to complement your favorite wines and cocktails in our sophisticated lounge.",
-          image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/non-veg-platter-500x500-1768074632795.webp?width=8000&height=8000&resize=contain"
-        }
+      {
+        day: {
+          title: "Gourmet Platters",
+          text: "Fun Place to Host. Experience the art of sharing with our exquisitely curated platters, featuring a premium selection of artisanal cheeses, seasonal fruits, and savory delights.",
+          image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/PLATTERS-1768069833489.jpg"
+        },
+      night: {
+        title: "Signature Sharing",
+        text: "Elevate your evening with our signature sharing boards, perfectly crafted to complement your favorite wines and cocktails in our sophisticated lounge.",
+        image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/PLATTERS-1768069833489.jpg"
+      }
+    },
+    {
+      day: null,
+      night: {
+        title: "Music & Socials",
+        text: "Experience the ultimate rhythm of the night with our resident DJs and live musical performances. From soulful melodies to high-energy beats, every night is a celebration.",
+        image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/Screenshot-2026-01-10-at-10.13.40-PM-1768065673924.png"
+      }
     }
+
 ]
 
 export function Ambience() {
@@ -92,93 +101,31 @@ export function Ambience() {
         )
       })}
 
-        {/* Bar & Drinks Visual Focus for Night Mode */}
-          {isDark && (
-            <section className="py-24 overflow-hidden bg-black">
-              <div className="flex">
+      {/* Bar & Drinks Visual Focus for Night Mode */}
+      {isDark && (
+        <section className="py-24 px-6 bg-black">
+           <motion.div 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            className="grid grid-cols-2 md:grid-cols-4 gap-4"
+          >
+            {[
+              "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/bv-vb-1767709258377.jpeg",
+              "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/WhatsApp-Image-2026-01-06-at-19.47.42-1767709258235.jpeg",
+              "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/vxcgdxhb-1767709258232.jpeg",
+                "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/N1-1768069191275.jpeg"
+            ].map((img, i) => (
                 <motion.div 
-                  animate={{ x: ["0%", "-50%"] }}
-                  transition={{ 
-                    duration: 20,
-                    repeat: Infinity,
-                    ease: "linear"
-                  }}
-                  className="flex gap-4 px-2"
+                  key={i}
+                  whileHover={{ y: -10 }}
+                  className="h-64 md:h-96 rounded-lg overflow-hidden relative group"
                 >
-                  {[...Array(2)].map((_, idx) => (
-                    <React.Fragment key={idx}>
-                      {[
-                        "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/bv-vb-1767709258377.jpeg",
-                        "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/WhatsApp-Image-2026-01-06-at-19.47.42-1767709258235.jpeg",
-                        "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/vxcgdxhb-1767709258232.jpeg",
-                        "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/N1-1768069191275.jpeg"
-                      ].map((img, i) => (
-                        <div 
-                          key={`${idx}-${i}`}
-                          className="w-[300px] md:w-[400px] h-64 md:h-96 rounded-lg overflow-hidden relative group flex-shrink-0"
-                        >
-                          <img src={img} alt="Drink" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                        </div>
-                      ))}
-                    </React.Fragment>
-                  ))}
+                  <img src={img} alt="Drink" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
                 </motion.div>
-              </div>
-            </section>
-          )}
-
-        {!isDark && (
-          <section className="py-24 px-6 bg-cream/30 border-t border-primary/10">
-            <div className="max-w-7xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="text-center mb-16"
-              >
-                <span className="text-primary font-display tracking-[0.4em] uppercase text-sm mb-4 block">
-                  Events & Celebrations
-                </span>
-                <h2 className="text-4xl md:text-5xl font-serif text-foreground mb-4">
-                  Fun Place To Host
-                </h2>
-                <div className="h-1 w-20 bg-primary/30 mx-auto" />
-              </motion.div>
-              
-                <div className="flex overflow-hidden py-4">
-                  <motion.div 
-                    animate={{ x: ["0%", "-50%"] }}
-                    transition={{ 
-                      duration: 40,
-                      repeat: Infinity,
-                      ease: "linear"
-                    }}
-                    className="flex gap-6 px-4"
-                  >
-                    {[...Array(2)].map((_, idx) => (
-                      <React.Fragment key={idx}>
-                        {[
-                          "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/WhatsApp-Image-2026-01-09-at-23.29.51-1-1768072767209.jpeg",
-                          "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/WhatsApp-Image-2026-01-09-at-23.29.51-2-1768072767986.jpeg",
-                          "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/WhatsApp-Image-2026-01-09-at-23.29.51-3-1768072767518.jpeg",
-                          "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/WhatsApp-Image-2026-01-09-at-23.29.51-4-1768072768179.jpeg",
-                          "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/WhatsApp-Image-2026-01-09-at-23.29.51-5-1768072768336.jpeg",
-                          "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/WhatsApp-Image-2026-01-09-at-23.29.51-1768072926653.jpeg"
-                        ].map((img, i) => (
-                          <div 
-                            key={`${idx}-${i}`}
-                            className="w-[400px] md:w-[600px] aspect-[16/9] rounded-xl overflow-hidden shadow-lg border border-primary/10 bg-white flex-shrink-0"
-                          >
-                            <img src={img} alt="Host your event" className="h-full w-full object-contain" />
-                          </div>
-                        ))}
-                      </React.Fragment>
-                    ))}
-                  </motion.div>
-                </div>
-            </div>
-          </section>
-        )}
+            ))}
+          </motion.div>
+        </section>
+      )}
     </section>
   )
 }
