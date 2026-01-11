@@ -64,22 +64,26 @@ export function Hero() {
                 className="object-cover"
               />
             </div>
-          
-              <div className="backdrop-blur-md bg-black/20 dark:bg-white/5 p-8 md:p-12 rounded-2xl border border-white/10 shadow-2xl flex flex-col items-center">
-                <h1 className="mb-4 text-6xl md:text-8xl font-bold font-display flex items-center justify-center flex-wrap gap-x-4 md:gap-x-8">
-                  <span style={{ color: '#E0B12D' }}>ROAST</span>
-                  <span className="inline-flex items-center justify-center rounded-full border-[6px] md:border-[10px] border-[#1F7A2E] text-[#1F7A2E] w-[1.1em] h-[1.1em] text-[0.8em] leading-none shrink-0">
-                    N
-                  </span>
-                  <span style={{ color: '#B01616' }}>TOAST</span>
-                </h1>
-                
-                  <p className={`max-w-xl text-lg md:text-xl uppercase tracking-[0.3em] ${isDark ? 'text-neon-red' : 'text-muted-foreground'}`}>
-                  {isDark ? "CLUB | KITCHEN" : "Fine Continental & Indian Cuisine"}
-                </p>
+            
+            <h1 className="mb-8 text-6xl md:text-8xl font-bold font-display flex items-center justify-center flex-wrap gap-x-4 md:gap-x-8">
+              <span style={{ color: '#E0B12D' }}>ROAST</span>
+              <span className="inline-flex items-center justify-center rounded-full border-[6px] md:border-[10px] border-[#1F7A2E] text-[#1F7A2E] w-[1.1em] h-[1.1em] text-[0.8em] leading-none shrink-0">
+                N
+              </span>
+              <span style={{ color: '#B01616' }}>TOAST</span>
+            </h1>
+
+            <div className={`px-8 py-4 md:px-12 md:py-6 rounded-xl backdrop-blur-md shadow-lg transition-all duration-500 ${
+              isDark 
+                ? 'bg-black/40 border border-white/10' 
+                : 'bg-white/40 border border-black/5'
+            }`}>
+              <p className={`max-w-xl text-lg md:text-xl uppercase tracking-[0.3em] ${isDark ? 'text-neon-red' : 'text-muted-foreground'}`}>
+                {isDark ? "CLUB | KITCHEN" : "Fine Continental & Indian Cuisine"}
+              </p>
             </div>
 
-          <motion.div 
+            <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.2 }}
