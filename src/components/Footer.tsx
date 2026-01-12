@@ -66,7 +66,7 @@ export function Footer() {
       </div>
       <div className="max-w-7xl mx-auto mt-16 pt-8 border-t border-muted text-center text-xs text-muted-foreground tracking-widest uppercase flex flex-col md:flex-row justify-between items-center gap-4">
         <span>© 2026 Roast N Toast. All Rights Reserved.</span>
-        <span>Developed by <a href="#" className="hover:text-primary transition-colors">webforyou</a></span>
+        <span>Developed by <a href="https://webforyou-site.vercel.app/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">webforyou</a></span>
       </div>
     </footer>
   )
