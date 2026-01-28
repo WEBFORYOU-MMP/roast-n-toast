@@ -95,12 +95,11 @@ function Card({ image, index, total, progress }: { image: any, index: number, to
   const exitStart = end - (end - start) * 0.2
   const exitEnd = end
 
-  const x = useTransform(
-    progress, 
-    [entryStart, entryEnd], 
-    [isEven ? "-120%" : "120%", "0%"],
-    { ease: [0.42, 0, 0.58, 1] } // Smooth ease-in-out
-  )
+    const x = useTransform(
+      progress, 
+      [entryStart, entryEnd], 
+      [isEven ? "-120%" : "120%", "0%"]
+    )
   
   const scale = useTransform(
     progress,
