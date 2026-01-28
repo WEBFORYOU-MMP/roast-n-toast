@@ -13,10 +13,10 @@ const menuItemsDay = [
     link: "/tasty-veggies",
     cta: "Explore Now"
   },
-        {
-          title: "Drinks and Shakes",
-          image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/360_F_242322187_urmTlqfR8TyG3OvpaNfPQeNlx0kmXwuH-1769510900386.jpg?width=8000&height=8000&resize=contain",
-        description: "Premium spirits, craft cocktails, and artisanal shakes.",
+          {
+            title: "Drinks and Shakes",
+            image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/BoozyShakes-TheLodgeAtTurningStoneResortCasino-MilkshakeSelection-CreditRobertMescavag-1769596863235.webp?width=8000&height=8000&resize=contain",
+          description: "Premium spirits, craft cocktails, and artisanal shakes.",
       link: "/drinks",
       cta: "Explore"
     },

@@ -2,6 +2,9 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { VisualEditsMessenger } from "orchids-visual-edits";
+import { SecurityWrapper } from "@/components/SecurityWrapper";
+import { FloatingPopup } from "@/components/FloatingPopup";
+import { Toaster } from "sonner";
 
 export const viewport: Viewport = {
   themeColor: "#000000",
@@ -71,8 +74,12 @@ export default function RootLayout({
           defaultTheme="light"
           enableSystem={false}
           disableTransitionOnChange
-        >
-          {children}
+            >
+            <SecurityWrapper />
+            <FloatingPopup />
+            <Toaster position="bottom-right" />
+            {children}
+
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{

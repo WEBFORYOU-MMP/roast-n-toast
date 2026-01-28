@@ -27,7 +27,7 @@ const ambienceData = [
         night: {
           title: "Premium Bar Experience",
           text: "Indulge in our curated selection of fine wines, craft cocktails, and premium spirits. Our bartenders are masters of mixology, creating liquid art for your pleasure.",
-          image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/360_F_242322187_urmTlqfR8TyG3OvpaNfPQeNlx0kmXwuH-1769510900386.jpg?width=8000&height=8000&resize=contain"
+            image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/image-1769597154532.png?width=8000&height=8000&resize=contain"
         }
     },
         {
