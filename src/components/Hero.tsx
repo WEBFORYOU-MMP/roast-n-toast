@@ -65,15 +65,15 @@ export function Hero() {
               />
             </div>
             
-            <h1 className="mb-8 text-4xl sm:text-6xl md:text-8xl font-bold font-display flex items-center justify-center flex-wrap gap-x-4 md:gap-x-8">
+            <h1 className="mb-6 text-3xl xs:text-4xl sm:text-6xl md:text-8xl font-bold font-display flex items-center justify-center flex-wrap gap-x-3 sm:gap-x-4 md:gap-x-8">
               <span style={{ color: '#E0B12D' }}>ROAST</span>
-              <span className="inline-flex items-center justify-center rounded-full border-[4px] md:border-[10px] border-[#1F7A2E] text-[#1F7A2E] w-[1.1em] h-[1.1em] text-[0.8em] leading-none shrink-0">
+              <span className="inline-flex items-center justify-center rounded-full border-[3px] sm:border-[4px] md:border-[10px] border-[#1F7A2E] text-[#1F7A2E] w-[1.1em] h-[1.1em] text-[0.8em] leading-none shrink-0">
                 N
               </span>
               <span style={{ color: '#B01616' }}>TOAST</span>
             </h1>
 
-            <div className={`px-4 py-3 md:px-12 md:py-6 rounded-xl backdrop-blur-md shadow-lg transition-all duration-500 ${
+            <div className={`px-4 py-3 sm:px-8 sm:py-4 md:px-12 md:py-6 rounded-xl backdrop-blur-md shadow-lg transition-all duration-500 ${
               isDark 
                 ? 'bg-black/40 border border-white/10' 
                 : 'bg-white/40 border border-black/5'

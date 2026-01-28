@@ -71,20 +71,20 @@ export function Ambience() {
             </div>
 
             {/* Text Side */}
-            <div className={`w-full md:w-1/2 flex flex-col justify-center px-8 py-16 md:px-24 ${isDark ? 'bg-card' : 'bg-cream/30'}`}>
+            <div className={`w-full md:w-1/2 flex flex-col justify-center px-6 py-12 sm:px-12 sm:py-16 md:px-24 ${isDark ? 'bg-card' : 'bg-cream/30'}`}>
               <motion.div
                 initial={{ opacity: 0, x: isEven ? 50 : -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                <span className="text-primary font-display tracking-[0.4em] uppercase text-sm mb-4 block">
+                <span className="text-primary font-display tracking-[0.4em] uppercase text-xs sm:text-sm mb-3 sm:mb-4 block">
                   {isDark ? "The Night" : "The Day"}
                 </span>
-                <h3 className={`text-3xl md:text-6xl mb-6 md:mb-8 tracking-wider ${isDark ? 'font-display text-white' : 'font-serif text-foreground'}`}>
+                <h3 className={`text-2xl sm:text-3xl md:text-6xl mb-4 sm:mb-6 md:mb-8 tracking-wider ${isDark ? 'font-display text-white' : 'font-serif text-foreground'}`}>
                   {content.title}
                 </h3>
-                <p className="text-base md:text-xl text-muted-foreground leading-relaxed max-w-lg mb-8 md:mb-12">
+                <p className="text-sm sm:text-base md:text-xl text-muted-foreground leading-relaxed max-w-lg mb-6 sm:mb-8 md:mb-12">
                   {content.text}
                 </p>
               </motion.div>
@@ -95,7 +95,7 @@ export function Ambience() {
 
         {/* Bar & Drinks Visual Focus for Night Mode */}
           {isDark && (
-            <section className="py-24 bg-black overflow-hidden">
+            <section className="py-16 sm:py-24 bg-black overflow-hidden">
                <div className="flex whitespace-nowrap">
                  <motion.div 
                   animate={{ x: [0, "-50%"] }}
@@ -118,7 +118,7 @@ export function Ambience() {
                   ].map((img, i) => (
                       <div 
                         key={i}
-                        className="h-64 md:h-96 w-[300px] md:w-[450px] flex-shrink-0 rounded-lg overflow-hidden relative group"
+                        className="h-48 xs:h-64 md:h-96 w-[240px] xs:w-[300px] md:w-[450px] flex-shrink-0 rounded-lg overflow-hidden relative group"
                       >
                         <img src={img} alt="Drink" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
                       </div>
@@ -129,21 +129,21 @@ export function Ambience() {
           )}
 
           {!isDark && (
-            <section className="py-24 bg-cream/30 border-t border-primary/10 overflow-hidden">
-              <div className="max-w-7xl mx-auto px-6 mb-16">
+            <section className="py-16 sm:py-24 bg-cream/30 border-t border-primary/10 overflow-hidden">
+              <div className="max-w-7xl mx-auto px-6 mb-12 sm:mb-16">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   className="text-center"
                 >
-                  <span className="text-primary font-display tracking-[0.4em] uppercase text-sm mb-4 block">
+                  <span className="text-primary font-display tracking-[0.4em] uppercase text-xs sm:text-sm mb-3 sm:mb-4 block">
                     Events & Celebrations
                   </span>
-                  <h2 className="text-4xl md:text-5xl font-serif text-foreground mb-4">
+                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-foreground mb-4">
                     Fun Place To Host
                   </h2>
-                  <div className="h-1 w-20 bg-primary/30 mx-auto" />
+                  <div className="h-1 w-16 sm:w-20 bg-primary/30 mx-auto" />
                 </motion.div>
               </div>
                 
@@ -155,7 +155,7 @@ export function Ambience() {
                     repeat: Infinity,
                     ease: "linear"
                   }}
-                  className="flex gap-6 px-3"
+                  className="flex gap-4 sm:gap-6 px-3"
                 >
                   {[
                     "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/WhatsApp-Image-2026-01-09-at-23.29.51-1-1768072767209.jpeg",
@@ -173,7 +173,7 @@ export function Ambience() {
                   ].map((img, i) => (
                     <div 
                       key={i}
-                      className="aspect-[16/9] h-64 md:h-80 flex-shrink-0 rounded-xl overflow-hidden shadow-lg border border-primary/10 bg-white"
+                      className="aspect-[16/9] h-48 sm:h-64 md:h-80 flex-shrink-0 rounded-xl overflow-hidden shadow-lg border border-primary/10 bg-white"
                     >
                       <img src={img} alt="Host your event" className="h-full w-full object-contain" />
                     </div>
@@ -191,7 +191,7 @@ export function Ambience() {
       >
         <Link
           href="/ambiance"
-          className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-12 py-4 rounded-full font-bold text-lg tracking-widest hover:bg-primary/90 transition-colors shadow-[0_0_20px_rgba(224,177,45,0.3)]"
+          className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 sm:px-12 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg tracking-widest hover:bg-primary/90 transition-colors shadow-[0_0_20px_rgba(224,177,45,0.3)]"
         >
           EXPLORE AMBIANCE
         </Link>

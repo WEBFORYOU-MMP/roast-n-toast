@@ -86,71 +86,71 @@ const menuItemsNight = [
             {isDark ? "Food + drinks + music + ambience = pub" : "Roast N Toast Day Specials ."}
           </motion.h2>
 
-        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-6">
-          {menuItems.map((item, index) => (
-            <React.Fragment key={item.title}>
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.2 }}
-                className="flex flex-col items-center group w-full sm:w-auto"
-              >
-                <div className="relative mb-6 md:mb-8">
-                  <motion.div
-                    animate={{ rotate: 360 }}
-                    transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                    className={`absolute -inset-4 rounded-full border-2 border-dashed ${isDark ? 'border-primary/50 shadow-[0_0_30px_rgba(255,49,49,0.3)]' : 'border-primary/20 shadow-xl'}`}
-                  />
-                  
-                        <Link
-                          href={item.link || "#"}
-                          className="relative h-40 w-40 sm:h-44 sm:w-44 md:h-40 md:w-40 lg:h-56 lg:w-56 overflow-hidden rounded-full cursor-pointer z-10 block"
-                        >
-                      <motion.div
-                        animate={{ rotate: -360 }}
-                        transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
-                        className="h-full w-full"
-                      >
-                        <motion.div
-                          whileHover={{ scale: 1.1 }}
-                          className="h-full w-full bg-cover bg-center transition-transform duration-700"
-                          style={{ backgroundImage: `url("${item.image}")` }}
-                        />
-                      </motion.div>
-                      
-                      <motion.div 
-                        initial={{ opacity: 0 }}
-                        whileHover={{ opacity: 1 }}
-                        className="absolute inset-0 flex items-center justify-center transition-opacity bg-black/40"
-                      >
-                        <span className="text-white font-display tracking-widest text-lg uppercase px-4 py-2 border border-white/50">{item.cta || "Explore"}</span>
-                      </motion.div>
-                    </Link>
-                </div>
-
-                <h3 className={`text-xl md:text-2xl mb-3 tracking-widest uppercase font-bold ${isDark ? 'font-display text-gold' : 'font-serif text-foreground'}`}>
-                  {item.title}
-                </h3>
-                <p className="text-muted-foreground tracking-wide max-w-[200px] text-sm text-center">
-                  {item.description}
-                </p>
-              </motion.div>
-              
-              {index < menuItems.length - 1 && (
-                <motion.span
-                  initial={{ opacity: 0, scale: 0 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
+          <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-8 md:gap-6">
+            {menuItems.map((item, index) => (
+              <React.Fragment key={item.title}>
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: index * 0.2 + 0.1 }}
-                  className={`hidden md:inline text-4xl md:text-5xl font-bold ${isDark ? 'text-gold' : 'text-primary'} mx-2 md:mx-4`}
+                  transition={{ delay: index * 0.2 }}
+                  className="flex flex-col items-center group w-full xs:w-[calc(50%-1.5rem)] sm:w-auto"
                 >
-                  +
-                </motion.span>
-              )}
-            </React.Fragment>
-          ))}
-        </div>
+                  <div className="relative mb-4 sm:mb-6 md:mb-8">
+                    <motion.div
+                      animate={{ rotate: 360 }}
+                      transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                      className={`absolute -inset-2 sm:-inset-4 rounded-full border-2 border-dashed ${isDark ? 'border-primary/50 shadow-[0_0_30px_rgba(255,49,49,0.3)]' : 'border-primary/20 shadow-xl'}`}
+                    />
+                    
+                          <Link
+                            href={item.link || "#"}
+                            className="relative h-32 w-32 xs:h-36 xs:w-36 sm:h-44 sm:w-44 md:h-40 md:w-40 lg:h-56 lg:w-56 overflow-hidden rounded-full cursor-pointer z-10 block"
+                          >
+                        <motion.div
+                          animate={{ rotate: -360 }}
+                          transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+                          className="h-full w-full"
+                        >
+                          <motion.div
+                            whileHover={{ scale: 1.1 }}
+                            className="h-full w-full bg-cover bg-center transition-transform duration-700"
+                            style={{ backgroundImage: `url("${item.image}")` }}
+                          />
+                        </motion.div>
+                        
+                        <motion.div 
+                          initial={{ opacity: 0 }}
+                          whileHover={{ opacity: 1 }}
+                          className="absolute inset-0 flex items-center justify-center transition-opacity bg-black/40"
+                        >
+                          <span className="text-white font-display tracking-widest text-sm sm:text-lg uppercase px-3 py-1 sm:px-4 sm:py-2 border border-white/50">{item.cta || "Explore"}</span>
+                        </motion.div>
+                      </Link>
+                  </div>
+
+                  <h3 className={`text-lg md:text-2xl mb-2 sm:mb-3 tracking-widest uppercase font-bold ${isDark ? 'font-display text-gold' : 'font-serif text-foreground'}`}>
+                    {item.title}
+                  </h3>
+                  <p className="text-muted-foreground tracking-wide max-w-[160px] sm:max-w-[200px] text-xs sm:text-sm text-center">
+                    {item.description}
+                  </p>
+                </motion.div>
+                
+                {index < menuItems.length - 1 && (
+                  <motion.span
+                    initial={{ opacity: 0, scale: 0 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.2 + 0.1 }}
+                    className={`hidden lg:inline text-4xl md:text-5xl font-bold ${isDark ? 'text-gold' : 'text-primary'} mx-2 md:mx-4`}
+                  >
+                    +
+                  </motion.span>
+                )}
+              </React.Fragment>
+            ))}
+          </div>
 
       </div>
     </section>
