@@ -55,15 +55,7 @@ export function Navbar() {
                     <Link href="/music-and-socials" className="hover:text-primary transition-colors">
                     MUSIC SOCIALS
                   </Link>
-                    <a 
-                      href="https://wa.me/918297977877?text=Hi%2C%20I%20would%20like%20to%20make%20a%20reservation"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hidden lg:block hover:text-[#E0B12D] transition-colors"
-                    >
-                      Reserve Now
-                    </a>
-                  </div>
+                </div>
                   <div className="flex items-center gap-2 md:gap-4">
                     <a 
                       href="https://wa.me/918297977877?text=Hi%2C%20I%20would%20like%20to%20make%20a%20reservation"
