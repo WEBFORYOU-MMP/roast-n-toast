@@ -56,15 +56,15 @@ export function Navbar() {
                   MUSIC SOCIALS
                 </Link>
               </div>
-                <div className="flex items-center gap-2 md:gap-4">
-                  <a 
-                    href="https://wa.me/918297977877?text=Hi%2C%20I%20would%20like%20to%20make%20a%20reservation"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center bg-[#E0B12D] text-black px-4 md:px-6 py-2 rounded-full font-bold uppercase tracking-widest text-[10px] md:text-xs hover:bg-[#E0B12D]/90 transition-all shadow-[0_0_15px_rgba(224,177,45,0.3)] hover:scale-105 active:scale-95 whitespace-nowrap"
-                  >
-                    Reserve Now
-                  </a>
+              <div className="flex items-center gap-2 md:gap-4">
+                <a 
+                  href="https://wa.me/918297977877?text=Hi%2C%20I%20would%20like%20to%20make%20a%20reservation"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hidden xs:block bg-[#E0B12D] text-black px-4 md:px-6 py-2 rounded-full font-bold uppercase tracking-widest text-[10px] md:text-xs hover:bg-[#E0B12D]/90 transition-all shadow-[0_0_15px_rgba(224,177,45,0.3)] hover:scale-105 active:scale-95 whitespace-nowrap"
+                >
+                  Reserve Now
+                </a>
                 <ThemeToggle />
                 <button 
                   className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
