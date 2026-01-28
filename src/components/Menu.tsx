@@ -13,20 +13,20 @@ const menuItemsDay = [
     link: "/tasty-veggies",
     cta: "Explore Now"
   },
-    {
-      title: "Drinks & Shakes",
-      image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/image-1768066392523.png?width=8000&height=8000&resize=contain",
-      description: "Premium spirits, craft cocktails, and artisanal shakes.",
+        {
+          title: "Drinks and Shakes",
+          image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/360_F_242322187_urmTlqfR8TyG3OvpaNfPQeNlx0kmXwuH-1769510900386.jpg?width=8000&height=8000&resize=contain",
+        description: "Premium spirits, craft cocktails, and artisanal shakes.",
       link: "/drinks",
       cta: "Explore"
     },
-  {
-    title: "Ambiance",
-    image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/AMBIANCE-1768066425853.png?width=8000&height=8000&resize=contain",
-    description: "Immerse yourself in our royal lounge and vibrant nightlife.",
-    link: "#",
-    cta: "Explore"
-  }
+    {
+      title: "Ambiance",
+      image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/AMBIANCE-1768066425853.png?width=8000&height=8000&resize=contain",
+      description: "Immerse yourself in our royal lounge and vibrant nightlife.",
+      link: "/ambiance",
+      cta: "Explore"
+    }
 ]
 
 const menuItemsNight = [
@@ -37,13 +37,13 @@ const menuItemsNight = [
     link: "/tasty-veggies",
     cta: "Explore Now"
   },
-    {
-      title: "BAR",
-      image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/image-1768066392523.png?width=8000&height=8000&resize=contain",
-      description: "Premium spirits, craft cocktails, and signature drinks.",
-      link: "/drinks",
-      cta: "Explore"
-    },
+        {
+          title: "BAR",
+          image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/360_F_242322187_urmTlqfR8TyG3OvpaNfPQeNlx0kmXwuH-1769510900386.jpg?width=8000&height=8000&resize=contain",
+          description: "Premium spirits, craft cocktails, and signature drinks.",
+        link: "/bar-images",
+        cta: "Explore"
+      },
   {
     title: "Music",
     image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/Screenshot-2026-01-10-at-10.13.40-PM-1768065673924.png?width=8000&height=8000&resize=contain",
@@ -51,18 +51,26 @@ const menuItemsNight = [
     link: "/events",
     cta: "Explore"
   },
-  {
-    title: "Ambiance",
-    image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/AMBIANCE-1768066425853.png?width=8000&height=8000&resize=contain",
-    description: "Immerse yourself in our royal lounge and vibrant nightlife.",
-    link: "#",
-    cta: "Explore"
-  }
+    {
+      title: "Ambiance",
+      image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/AMBIANCE-1768066425853.png?width=8000&height=8000&resize=contain",
+      description: "Immerse yourself in our royal lounge and vibrant nightlife.",
+      link: "/ambiance",
+      cta: "Explore"
+    }
 ]
 
-export function Menu() {
-  const { theme } = useTheme()
-  const isDark = theme === "dark"
+  export function Menu() {
+    const { resolvedTheme } = useTheme()
+    const [mounted, setMounted] = React.useState(false)
+
+    React.useEffect(() => {
+      setMounted(true)
+    }, [])
+
+    if (!mounted) return null
+
+    const isDark = resolvedTheme === "dark"
 
   const menuItems = isDark ? menuItemsNight : menuItemsDay
 
@@ -95,10 +103,10 @@ export function Menu() {
                     className={`absolute -inset-4 rounded-full border-2 border-dashed ${isDark ? 'border-primary/50 shadow-[0_0_30px_rgba(255,49,49,0.3)]' : 'border-primary/20 shadow-xl'}`}
                   />
                   
-                    <Link
-                      href={item.link || "#"}
-                      className="relative h-40 w-40 sm:h-48 sm:w-48 md:h-56 md:w-56 overflow-hidden rounded-full cursor-pointer z-10 block"
-                    >
+                        <Link
+                          href={item.link || "#"}
+                          className="relative h-40 w-40 sm:h-44 sm:w-44 md:h-40 md:w-40 lg:h-56 lg:w-56 overflow-hidden rounded-full cursor-pointer z-10 block"
+                        >
                       <motion.div
                         animate={{ rotate: -360 }}
                         transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
@@ -121,7 +129,7 @@ export function Menu() {
                     </Link>
                 </div>
 
-                <h3 className={`text-xl md:text-2xl mb-3 tracking-widest uppercase ${isDark ? 'font-display text-gold' : 'font-serif text-foreground'}`}>
+                <h3 className={`text-xl md:text-2xl mb-3 tracking-widest uppercase font-bold ${isDark ? 'font-display text-gold' : 'font-serif text-foreground'}`}>
                   {item.title}
                 </h3>
                 <p className="text-muted-foreground tracking-wide max-w-[200px] text-sm text-center">

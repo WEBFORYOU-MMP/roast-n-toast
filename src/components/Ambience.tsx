@@ -3,6 +3,7 @@
 import * as React from "react"
 import { motion } from "framer-motion"
 import { useTheme } from "next-themes"
+import Link from "next/link"
 
 const ambienceData = [
   {
@@ -23,11 +24,11 @@ const ambienceData = [
         text: "Our culinary artisans bring you the finest Italian and Indian cuisine, prepared with passion and served with elegance.",
         image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/vcvc-1767709258240.jpeg"
       },
-      night: {
-        title: "Premium Bar Experience",
-        text: "Indulge in our curated selection of fine wines, craft cocktails, and premium spirits. Our bartenders are masters of mixology, creating liquid art for your pleasure.",
-        image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/cheers-1768074450059.png?width=8000&height=8000&resize=contain"
-      }
+        night: {
+          title: "Premium Bar Experience",
+          text: "Indulge in our curated selection of fine wines, craft cocktails, and premium spirits. Our bartenders are masters of mixology, creating liquid art for your pleasure.",
+          image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/360_F_242322187_urmTlqfR8TyG3OvpaNfPQeNlx0kmXwuH-1769510900386.jpg?width=8000&height=8000&resize=contain"
+        }
     },
         {
           day: {
@@ -179,8 +180,22 @@ export function Ambience() {
                   ))}
                 </motion.div>
               </div>
-            </section>
-          )}
+          </section>
+        )}
+
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="py-12 text-center bg-background"
+      >
+        <Link
+          href="/ambiance"
+          className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-12 py-4 rounded-full font-bold text-lg tracking-widest hover:bg-primary/90 transition-colors shadow-[0_0_20px_rgba(224,177,45,0.3)]"
+        >
+          EXPLORE AMBIANCE
+        </Link>
+      </motion.div>
     </section>
   )
 }

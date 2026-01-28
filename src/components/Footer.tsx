@@ -10,7 +10,7 @@ export function Footer() {
   const isDark = theme === "dark"
 
   return (
-      <footer className={`py-12 md:py-16 px-6 border-t ${isDark ? 'bg-black border-white/10' : 'bg-cream/50 border-primary/10'}`}>
+        <footer className={`py-12 md:py-16 px-6 border-t text-black ${isDark ? 'bg-black border-white/10' : 'bg-cream/50 border-primary/10'}`}>
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12">
           <div className="flex flex-col gap-6 sm:col-span-2 md:col-span-1">
             <div className="flex items-center gap-4">
@@ -24,49 +24,47 @@ export function Footer() {
                 </div>
               <span className="text-xl md:text-2xl font-display tracking-[0.2em] font-bold">ROAST N TOAST</span>
             </div>
-            <p className="text-muted-foreground text-sm leading-relaxed max-w-sm">
+            <p className="text-black text-sm leading-relaxed max-w-sm">
               Experience the duality of premium dining and electrifying nightlife in the heart of Hyderabad.
             </p>
             <div className="flex gap-4 mt-4">
               <a href="https://www.instagram.com/roastntoasthyd/" target="_blank" rel="noopener noreferrer">
-                <Instagram className="w-5 h-5 cursor-pointer hover:text-primary transition-colors" />
+                <Instagram className="w-5 h-5 cursor-pointer hover:text-black transition-colors" />
               </a>
-              <Facebook className="w-5 h-5 cursor-pointer hover:text-primary transition-colors" />
-              <Twitter className="w-5 h-5 cursor-pointer hover:text-primary transition-colors" />
             </div>
           </div>
 
 
         <div>
-          <h4 className={`text-lg mb-6 tracking-widest uppercase ${isDark ? 'text-gold' : 'text-primary'}`}>Quick Links</h4>
-            <ul className="flex flex-col gap-3 text-sm text-muted-foreground">
-              <li><a href="#menu" className="hover:text-primary transition-colors">Menu</a></li>
-              <li><a href="#ambience" className="hover:text-primary transition-colors">Ambience</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Reservations</a></li>
-              <li><a href="/events" className="hover:text-primary transition-colors">Events</a></li>
+          <h4 className="text-lg mb-6 tracking-widest uppercase text-black">Quick Links</h4>
+            <ul className="flex flex-col gap-3 text-sm text-black">
+              <li><a href="#menu" className="hover:text-black transition-colors">Menu</a></li>
+              <li><a href="#ambience" className="hover:text-black transition-colors">Ambience</a></li>
+              <li><a href="#" className="hover:text-black transition-colors">Reservations</a></li>
+              <li><a href="/events" className="hover:text-black transition-colors">Events</a></li>
             </ul>
         </div>
 
         <div>
-          <h4 className={`text-lg mb-6 tracking-widest uppercase ${isDark ? 'text-gold' : 'text-primary'}`}>Contact Us</h4>
-          <ul className="flex flex-col gap-3 text-sm text-muted-foreground">
-            <li className="flex items-center gap-2"><MapPin className="w-4 h-4" /> Madinaguda, Hyderabad</li>
-            <li className="flex items-center gap-2"><Phone className="w-4 h-4" /> +91 98765 43210</li>
-            <li className="flex items-center gap-2"><Mail className="w-4 h-4" /> info@roastntoast.com</li>
+          <h4 className="text-lg mb-6 tracking-widest uppercase text-black">Contact Us</h4>
+          <ul className="flex flex-col gap-3 text-sm text-black">
+          <li className="flex items-start gap-2"><MapPin className="w-4 h-4 mt-1 flex-shrink-0" /> Above Westside Showroom, 4th Floor, Land Mark - Madinaguda, Main Road, Hyderabad, Telangana 500049</li>
+              <li className="flex items-center gap-2"><Phone className="w-4 h-4" /> 9105550999 / 8297977877</li>
+              <li className="flex items-center gap-2"><Mail className="w-4 h-4" /> roastntoasthyd@gmail.com</li>
           </ul>
         </div>
 
         <div>
-          <h4 className={`text-lg mb-6 tracking-widest uppercase ${isDark ? 'text-gold' : 'text-primary'}`}>Hours</h4>
-          <ul className="flex flex-col gap-3 text-sm text-muted-foreground">
-            <li className="flex justify-between"><span>Day Mode:</span> <span>11:00 AM - 06:00 PM</span></li>
-            <li className="flex justify-between font-bold text-primary"><span>Night Mode:</span> <span>07:00 PM - 02:00 AM</span></li>
-          </ul>
+          <h4 className="text-lg mb-6 tracking-widest uppercase text-black">Hours</h4>
+            <ul className="flex flex-col gap-3 text-sm text-black">
+              <li className="flex justify-between gap-4"><span>Sun - Thu:</span> <span className="text-right">11:00 AM - 11:30 PM</span></li>
+              <li className="flex justify-between gap-4"><span>Fri - Sat:</span> <span className="text-right">11:00 AM - 12:30 AM</span></li>
+            </ul>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto mt-16 pt-8 border-t border-muted text-center text-xs text-muted-foreground tracking-widest uppercase flex flex-col md:flex-row justify-between items-center gap-4">
+      <div className="max-w-7xl mx-auto mt-16 pt-8 border-t border-muted text-center text-xs text-black tracking-widest uppercase flex flex-col md:flex-row justify-between items-center gap-4">
         <span>© 2026 Roast N Toast. All Rights Reserved.</span>
-        <span>Developed by <a href="https://webforyou-site.vercel.app/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">webforyou</a></span>
+        <span>Developed by <a href="https://webforyou-site.vercel.app/" target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors">webforyou</a></span>
       </div>
     </footer>
   )

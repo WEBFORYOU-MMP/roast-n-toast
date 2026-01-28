@@ -5,6 +5,7 @@ import { motion, useMotionValue, useSpring } from "framer-motion"
 import { Navbar } from "@/components/Navbar"
 import { Footer } from "@/components/Footer"
 import Image from "next/image"
+import { useTheme } from "next-themes"
 
 const shakes = [
   {
@@ -41,17 +42,28 @@ const refreshingDrinks = [
 ]
 
 export default function DrinksPage() {
-  const mouseX = useMotionValue(0)
-  const mouseY = useMotionValue(0)
+    const { resolvedTheme } = useTheme()
+    const [mounted, setMounted] = React.useState(false)
 
-  const springX = useSpring(mouseX, { stiffness: 100, damping: 30 })
-  const springY = useSpring(mouseY, { stiffness: 100, damping: 30 })
+    React.useEffect(() => {
+      setMounted(true)
+    }, [])
 
-  function handleMouseMove({ currentTarget, clientX, clientY }: React.MouseEvent) {
-    const { left, top } = currentTarget.getBoundingClientRect()
-    mouseX.set(clientX - left)
-    mouseY.set(clientY - top)
-  }
+    const mouseX = useMotionValue(0)
+    const mouseY = useMotionValue(0)
+
+    const springX = useSpring(mouseX, { stiffness: 100, damping: 30 })
+    const springY = useSpring(mouseY, { stiffness: 100, damping: 30 })
+
+    function handleMouseMove({ currentTarget, clientX, clientY }: React.MouseEvent) {
+      const { left, top } = currentTarget.getBoundingClientRect()
+      mouseX.set(clientX - left)
+      mouseY.set(clientY - top)
+    }
+
+    if (!mounted) return null
+
+    const showShakes = resolvedTheme !== "dark"
 
   return (
     <main 
@@ -70,49 +82,55 @@ export default function DrinksPage() {
 
       <div className="max-w-7xl mx-auto px-6 pt-32 pb-24 relative z-10">
         {/* Shakes Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-16"
-        >
-          <h1 className="text-5xl md:text-7xl font-display tracking-widest mb-4">
-            SHAKES
-          </h1>
-          <div className="h-1 w-24 bg-primary mx-auto mb-6" />
-        </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 mb-24">
-          {shakes.map((item, index) => (
+        {showShakes && (
+          <>
             <motion.div
-              key={item.title}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="group relative bg-zinc-900/50 rounded-2xl overflow-hidden border border-zinc-800 hover:border-primary/50 transition-colors"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="text-center mb-16"
             >
-              <div className="aspect-[16/9] relative overflow-hidden">
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                {/* Title on top of images for Shakes */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/80 flex items-center justify-center p-8 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                   <h3 className="text-2xl md:text-3xl font-display tracking-wider text-primary uppercase drop-shadow-lg">
-                    {item.title}
-                  </h3>
-                </div>
-                <div className="absolute top-0 left-0 right-0 p-6 bg-gradient-to-b from-black/70 to-transparent">
-                  <h3 className="text-lg md:text-xl font-display tracking-wider text-primary uppercase">
-                    {item.title}
-                  </h3>
-                </div>
-              </div>
+              <h1 className="text-5xl md:text-7xl font-display font-bold tracking-widest mb-4">
+                SHAKES
+              </h1>
+              <div className="h-1 w-24 bg-primary mx-auto mb-6" />
             </motion.div>
-          ))}
-        </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 mb-24">
+              {shakes.map((item, index) => (
+                <motion.div
+                  key={item.title}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className={`group relative bg-zinc-900/50 rounded-2xl overflow-hidden border border-zinc-800 hover:border-primary/50 transition-colors ${
+                    index === 2 ? "md:col-span-2 md:max-w-2xl md:mx-auto w-full" : ""
+                  }`}
+                >
+                  <div className="aspect-[16/9] relative overflow-hidden">
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    {/* Title on top of images for Shakes */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/80 flex items-center justify-center p-8 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                       <h3 className="text-2xl md:text-3xl font-display tracking-wider text-primary uppercase drop-shadow-lg">
+                        {item.title}
+                      </h3>
+                    </div>
+                    <div className="absolute top-0 left-0 right-0 p-6 bg-gradient-to-b from-black/70 to-transparent text-center">
+                      <h3 className="text-lg md:text-xl font-display tracking-wider text-primary uppercase">
+                        {item.title}
+                      </h3>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </>
+        )}
 
         {/* Refreshing Drinks Section */}
         <motion.div
@@ -121,7 +139,7 @@ export default function DrinksPage() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl md:text-7xl font-display tracking-widest mb-4">
+          <h2 className="text-5xl md:text-7xl font-display font-bold tracking-widest mb-4">
             REFRESHING DRINKS
           </h2>
           <div className="h-1 w-24 bg-primary mx-auto mb-6" />
@@ -147,7 +165,7 @@ export default function DrinksPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
               </div>
               
-              <div className="p-8">
+              <div className="p-8 text-center">
                 <h3 className="text-2xl font-display tracking-wider mb-2 text-primary uppercase">
                   {item.title}
                 </h3>
