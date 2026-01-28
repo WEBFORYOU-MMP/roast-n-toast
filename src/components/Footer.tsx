@@ -60,7 +60,7 @@ export function Footer() {
       </div>
       <div className="max-w-7xl mx-auto mt-16 pt-8 border-t border-muted text-center text-xs tracking-widest uppercase flex flex-col md:flex-row justify-between items-center gap-4">
         <span>© 2026 Roast N Toast. All Rights Reserved.</span>
-        <span> <a href="wfy.co.in" target="_blank" rel="noopener noreferrer" className="hover:text-black dark:hover:text-red-500 transition-colors">Developed by webforyou</a></span>
+        <span> <a href="https://www.wfy.co.in/" target="_blank" rel="noopener noreferrer" className="hover:text-black dark:hover:text-red-500 transition-colors">Developed by webforyou</a></span>
       </div>
     </footer>
   )
