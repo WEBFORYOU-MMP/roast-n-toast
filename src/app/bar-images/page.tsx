@@ -66,12 +66,7 @@ export default function BarImagesPage() {
           className="mt-32 text-center"
         >
           <motion.a
-            href="https://wa.me/918297977877?text=Hi%2C%20I%20would%20like%20to%20make%20a%20reservation"
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center gap-2 bg-[#E0B12D] text-black px-12 py-4 rounded-full font-bold text-lg tracking-widest hover:bg-[#E0B12D]/90 transition-all shadow-[0_0_25px_rgba(224,177,45,0.4)] uppercase"
+            href="https://drive.google.com/file/d/1NIzKWFO9bac1ZV-z5AI7eOoC4rdbye1h/view?usp=sharing"
           >
             Explore More
           </motion.a>
