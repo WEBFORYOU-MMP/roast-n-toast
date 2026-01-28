@@ -1,69 +1,31 @@
-"use client"
+import { HomeClient } from "@/components/HomeClient"
+import type { Metadata } from "next"
 
-import * as React from "react"
-import { Navbar } from "@/components/Navbar"
-import { Hero } from "@/components/Hero"
-import { Menu } from "@/components/Menu"
-import { Ambience } from "@/components/Ambience"
-import { Footer } from "@/components/Footer"
-import { motion, useScroll, useSpring } from "framer-motion"
+export const metadata: Metadata = {
+  title: "Roast N Toast Hyderabad | Best Restaurant & Nightclub in Madinaguda",
+  description: "Experience fine dining by day and electrifying nightlife by night at Roast N Toast Hyderabad. Best multicuisine restaurant and premium club in Madinaguda.",
+  keywords: ["Roast N Toast", "Hyderabad Restaurant", "Nightclub Hyderabad", "Madinaguda Dining", "Best Pub in Hyderabad", "Fine Dining Hyderabad"],
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Roast N Toast Hyderabad | Best Restaurant & Nightclub",
+    description: "Experience fine dining by day and electrifying nightlife by night at Roast N Toast Hyderabad.",
+    url: "https://roastntoasthyd.com",
+    siteName: "Roast N Toast",
+    images: [
+      {
+        url: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/55D7DFDB-95A1-4994-9227-044842B9795E-1767713898800.png",
+        width: 1200,
+        height: 630,
+        alt: "Roast N Toast Logo",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+}
 
 export default function Home() {
-  const { scrollYProgress } = useScroll()
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001
-  })
-
-  React.useEffect(() => {
-    const handleInteraction = () => {
-      if (!document.fullscreenElement) {
-        document.documentElement.requestFullscreen().catch((err) => {
-          console.warn(`Error attempting to enable full-screen mode: ${err.message}`)
-        })
-      }
-      // Remove listeners after first successful attempt or even after one interaction 
-      // to avoid repeatedly trying if blocked
-      cleanup()
-    }
-
-    const cleanup = () => {
-      window.removeEventListener("click", handleInteraction)
-      window.removeEventListener("touchstart", handleInteraction)
-      window.removeEventListener("scroll", handleInteraction)
-    }
-
-    window.addEventListener("click", handleInteraction)
-    window.addEventListener("touchstart", handleInteraction)
-    window.addEventListener("scroll", handleInteraction)
-
-    return cleanup
-  }, [])
-
-  return (
-    <main className="relative min-h-screen selection:bg-primary selection:text-primary-foreground">
-      {/* Scroll Progress Bar */}
-      <motion.div
-        className="fixed top-0 left-0 right-0 h-1 bg-primary z-[60] origin-left"
-        style={{ scaleX }}
-      />
-
-      <Navbar />
-      
-      <section className="relative">
-        <Hero />
-      </section>
-
-      <section className="relative">
-        <Menu />
-      </section>
-
-      <section className="relative">
-        <Ambience />
-      </section>
-
-      <Footer />
-    </main>
-  )
+  return <HomeClient />
 }
