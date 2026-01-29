@@ -3,7 +3,7 @@
 import * as React from "react"
 import { useTheme } from "next-themes"
 import Image from "next/image"
-import { Instagram, Facebook, Twitter, Mail, MapPin, Phone } from "lucide-react"
+import { Instagram, Facebook, Twitter, Mail, MapPin, Phone, Ticket } from "lucide-react"
 
 export function Footer() {
   return (
@@ -28,15 +28,36 @@ export function Footer() {
             <a href="https://www.instagram.com/roastntoasthyd/" target="_blank" rel="noopener noreferrer">
               <Instagram className="w-5 h-5 cursor-pointer hover:text-black dark:hover:text-red-500 transition-colors" />
             </a>
+            <a href="https://www.facebook.com/roastandtoasthyd/" target="_blank" rel="noopener noreferrer">
+              <Facebook className="w-5 h-5 cursor-pointer hover:text-black dark:hover:text-red-500 transition-colors" />
+            </a>
+            <a href="https://in.bookmyshow.com/explore/c/venues/roast-n-toast-hyderabad/rnth" target="_blank" rel="noopener noreferrer">
+              <Ticket className="w-5 h-5 cursor-pointer hover:text-black dark:hover:text-red-500 transition-colors" />
+            </a>
           </div>
         </div>
 
         <div>
           <h4 className="text-lg mb-4 sm:mb-6 tracking-widest uppercase font-bold">Contact Us</h4>
           <ul className="flex flex-col gap-3 text-sm">
-            <li className="flex items-start gap-2"><MapPin className="w-4 h-4 mt-1 flex-shrink-0" /> Above Westside Showroom, 4th Floor, Land Mark - Madinaguda, Main Road, Hyderabad, Telangana 500049</li>
-            <li className="flex items-center gap-2"><Phone className="w-4 h-4" /> 9105550999 / 8297977877</li>
-            <li className="flex items-center gap-2"><Mail className="w-4 h-4" /> roastntoasthyd@gmail.com</li>
+            <li className="flex items-start gap-2">
+              <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
+              <a href="https://maps.app.goo.gl/zE5itpuDUBfQhYPh9" target="_blank" rel="noopener noreferrer" className="hover:underline">
+                Above Westside Showroom, 4th Floor, Land Mark - Madinaguda, Main Road, Hyderabad, Telangana 500049
+              </a>
+            </li>
+            <li className="flex items-center gap-2">
+              <Phone className="w-4 h-4" />
+              <div className="flex gap-1">
+                <a href="tel:+919105550999" className="hover:underline">9105550999</a>
+                <span>/</span>
+                <a href="tel:+918297977877" className="hover:underline">8297977877</a>
+              </div>
+            </li>
+            <li className="flex items-center gap-2">
+              <Mail className="w-4 h-4" />
+              <a href="mailto:roastntoasthyd@gmail.com" className="hover:underline">roastntoasthyd@gmail.com</a>
+            </li>
           </ul>
         </div>
 
