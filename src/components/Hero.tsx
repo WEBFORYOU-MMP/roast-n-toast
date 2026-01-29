@@ -73,15 +73,17 @@ export function Hero() {
               <span style={{ color: '#B01616' }}>TOAST</span>
             </h1>
 
-            <div className={`px-4 py-3 sm:px-8 sm:py-4 md:px-12 md:py-6 rounded-xl backdrop-blur-md shadow-lg transition-all duration-500 ${
-              isDark 
-                ? 'bg-black/40 border border-white/10' 
-                : 'bg-white/40 border border-black/5'
-            }`}>
-              <p className="max-w-xl text-sm sm:text-lg md:text-xl uppercase tracking-[0.2em] md:tracking-[0.3em] text-black">
-                {isDark ? "CLUB | KITCHEN" : "Fine Continental & Indian Cuisine"}
-              </p>
-            </div>
+              <div className={`px-4 py-3 sm:px-8 sm:py-4 md:px-12 md:py-6 rounded-xl backdrop-blur-md shadow-lg transition-all duration-500 ${
+                isDark 
+                  ? 'bg-black/40 border border-white/10' 
+                  : 'bg-white/40 border border-black/5'
+              }`}>
+                <p className={`max-w-xl text-sm sm:text-lg md:text-xl uppercase tracking-[0.2em] md:tracking-[0.3em] font-bold ${isDark ? 'text-[#B01616]' : 'text-black'}`}>
+                  {isDark ? "CLUB | KITCHEN" : "Fine Continental & Indian Cuisine"}
+                </p>
+              </div>
+
+
 
 
             <motion.div 

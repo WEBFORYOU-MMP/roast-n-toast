@@ -86,10 +86,19 @@ export function Navbar() {
                 className="fixed left-0 right-0 z-40 bg-background/95 backdrop-blur-xl md:hidden flex flex-col items-center py-8 gap-6 text-lg xs:text-xl uppercase tracking-[0.2em] font-display border-b border-white/10 overflow-hidden"
               >
                 <Link href="/#menu" onClick={() => setIsOpen(false)} className="hover:text-primary transition-colors">Menu</Link>
-                  <Link href="/events" onClick={() => setIsOpen(false)} className="hover:text-primary transition-colors">Events</Link>
-                  <Link href="/offers" onClick={() => setIsOpen(false)} className="hover:text-primary transition-colors">Offers</Link>
-                    <Link href="/music-and-socials" onClick={() => setIsOpen(false)} className="hover:text-primary transition-colors">MUSIC SOCIALS</Link>
-                </motion.div>
+                    <Link href="/events" onClick={() => setIsOpen(false)} className="hover:text-primary transition-colors">Events</Link>
+                    <Link href="/offers" onClick={() => setIsOpen(false)} className="hover:text-primary transition-colors">Offers</Link>
+                      <Link href="/music-and-socials" onClick={() => setIsOpen(false)} className="hover:text-primary transition-colors">MUSIC SOCIALS</Link>
+                      <a 
+                        href="https://wa.me/918297977877?text=Hi%2C%20I%20would%20like%20to%20make%20a%20reservation"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-[#E0B12D] text-black px-8 py-3 rounded-full font-bold uppercase tracking-widest text-sm hover:bg-[#E0B12D]/90 transition-all shadow-[0_0_15px_rgba(224,177,45,0.3)] mt-4"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        Reserve Now
+                      </a>
+                  </motion.div>
               )}
           </AnimatePresence>
         </>

@@ -9,36 +9,36 @@ const ambienceData = [
   {
     day: {
         title: "Elegant Dining",
-        text: "Experience the perfect blend of luxury and comfort in our meticulously designed dining spaces. Bright, natural lighting complements the warm, refined atmosphere.",
+        text: "Experience the perfect blend of luxury and comfort in our meticulously designed dining spaces. As one of the Best restaurants to visit in Hyderabad with family, we provide bright, natural lighting that complements the warm, refined atmosphere.",
         image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/N1-1768069191275.jpeg"
       },
     night: {
       title: "Nightlife Electrified",
-      text: "As the sun sets, Roast N Toast transforms into Hyderabad's premier nightlife destination. High-energy beats, neon lights, and an electrifying atmosphere await.",
+      text: "As the sun sets, Roast N Toast transforms into the Best bar and restaurant to visit in Hyderabad. High-energy beats, neon lights, and an electrifying atmosphere make us the Top restaurants to visit in Hyderabad for nightlife.",
       image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/night-electrified-1768074449884.jpeg?width=8000&height=8000&resize=contain"
     }
   },
     {
       day: {
         title: "Refined Flavours",
-        text: "Our culinary artisans bring you the finest Italian and Indian cuisine, prepared with passion and served with elegance.",
+        text: "Our culinary artisans bring you the Best places to eat in Hyderabad, featuring the finest Italian and Indian cuisine, prepared with passion and served with elegance for all our guests.",
         image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/vcvc-1767709258240.jpeg"
       },
         night: {
           title: "Premium Bar Experience",
-          text: "Indulge in our curated selection of fine wines, craft cocktails, and premium spirits. Our bartenders are masters of mixology, creating liquid art for your pleasure.",
-            image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/image-1769597154532.png?width=8000&height=8000&resize=contain"
+          text: "Indulge in our curated selection of fine wines and craft cocktails. Known as the Best restaurants to visit in Hyderabad at night, our mixologists create liquid art for your pleasure.",
+          image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/image-1769597154532.png?width=8000&height=8000&resize=contain"
         }
     },
         {
           day: {
             title: "Gourmet Platters",
-            text: "Experience the art of sharing with our exquisitely curated platters, featuring a premium selection of artisanal cheeses, seasonal fruits, and savory delights.",
+            text: "Experience the art of sharing with our exquisitely curated platters. We are one of the Popular restaurants in Hyderabad for those seeking artisanal cheeses and savory delights.",
             image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/PLATTERS-1768069833489.jpg"
           },
         night: {
           title: "Signature Sharing",
-          text: "Elevate your evening with our signature sharing boards, perfectly crafted to complement your favorite wines and cocktails in our sophisticated lounge.",
+          text: "Elevate your evening with our signature sharing boards, making us one of the Best restaurants to visit in Hyderabad for couples seeking a sophisticated lounge experience.",
           image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/non-veg-platter-500x500-1768074632795.webp?width=8000&height=8000&resize=contain"
         }
     }
@@ -182,6 +182,12 @@ export function Ambience() {
               </div>
           </section>
         )}
+
+        <div className="max-w-4xl mx-auto px-6 py-12 text-center">
+          <p className="text-sm text-muted-foreground leading-relaxed">
+            Roast N Toast is consistently ranked among the <span className="text-primary font-medium">Best restaurants to visit in Hyderabad</span> and <span className="text-primary font-medium">Top restaurants to visit in Hyderabad</span>. Whether you&apos;re looking for the <span className="text-primary font-medium">Best restaurant with bar in Hyderabad</span> or <span className="text-primary font-medium">Must visit restaurants in Hyderabad</span>, we offer an unparalleled experience. Come discover why we are a top choice for those seeking a premium <span className="text-primary font-medium">restaurant and bar</span> in the city.
+          </p>
+        </div>
 
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
