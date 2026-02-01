@@ -50,22 +50,22 @@ export function Hero() {
       </AnimatePresence>
 
       <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center">
-        <motion.div
-          initial={{ y: 30, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.5, duration: 0.8 }}
-          className="flex flex-col items-center"
-        >
-            <div className="mb-6 h-24 w-24 md:h-32 md:w-32 relative overflow-hidden rounded-full border-2 border-primary/50 backdrop-blur-sm shadow-xl">
-              <Image
-                src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/55D7DFDB-95A1-4994-9227-044842B9795E-1767713898800.png?width=8000&height=8000&resize=contain"
-                alt="Roast N Toast Logo"
-                fill
-                className="object-cover"
-              />
-            </div>
-            
-            <h1 className="mb-6 text-3xl xs:text-4xl sm:text-6xl md:text-8xl font-bold font-display flex items-center justify-center flex-wrap gap-x-3 sm:gap-x-4 md:gap-x-8">
+            <motion.div
+              initial={{ y: 30, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.5, duration: 0.8 }}
+                className="flex flex-col items-center"
+              >
+                <div className="mb-6 h-24 w-24 md:h-32 md:w-32 relative overflow-hidden rounded-full border-2 border-primary/50 backdrop-blur-sm shadow-xl">
+                  <Image
+                    src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/55D7DFDB-95A1-4994-9227-044842B9795E-1767713898800.png?width=8000&height=8000&resize=contain"
+                    alt="Roast N Toast Logo"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                
+                <h1 className="mb-6 text-3xl xs:text-4xl sm:text-6xl md:text-8xl font-bold font-pirata flex items-center justify-center flex-wrap gap-x-3 sm:gap-x-4 md:gap-x-8">
               <span style={{ color: '#E0B12D' }}>ROAST</span>
               <span className="inline-flex items-center justify-center rounded-full border-[3px] sm:border-[4px] md:border-[10px] border-[#1F7A2E] text-[#1F7A2E] w-[1.1em] h-[1.1em] text-[0.8em] leading-none shrink-0">
                 N
@@ -78,10 +78,19 @@ export function Hero() {
                   ? 'bg-black/40 border border-white/10' 
                   : 'bg-white/40 border border-black/5'
               }`}>
-                <p className={`max-w-xl text-sm sm:text-lg md:text-xl uppercase tracking-[0.2em] md:tracking-[0.3em] font-bold ${isDark ? 'text-[#B01616]' : 'text-black'}`}>
+                <p className={`max-w-xl text-sm sm:text-lg md:text-xl uppercase tracking-[0.2em] md:tracking-[0.3em] font-bold font-pirata ${isDark ? 'text-[#B01616]' : 'text-black'}`}>
                   {isDark ? "CLUB | KITCHEN" : "Fine Continental & Indian Cuisine"}
                 </p>
               </div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.8, duration: 0.5 }}
+                className="mt-6 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[10px] sm:text-xs tracking-[0.3em] font-bold text-white/80 uppercase"
+              >
+                estd 2022
+              </motion.div>
 
 
 

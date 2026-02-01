@@ -5,6 +5,20 @@ import { VisualEditsMessenger } from "orchids-visual-edits";
 import { SecurityWrapper } from "@/components/SecurityWrapper";
 import { FloatingPopup } from "@/components/FloatingPopup";
 import { Toaster } from "sonner";
+import Script from "next/script";
+import { Pirata_One, Cinzel_Decorative } from "next/font/google";
+
+const pirataOne = Pirata_One({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-pirata",
+});
+
+const cinzelDecorative = Cinzel_Decorative({
+  weight: ["400", "700", "900"],
+  subsets: ["latin"],
+  variable: "--font-cinzel",
+});
 
 export const viewport: Viewport = {
   themeColor: "#000000",
@@ -13,7 +27,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://roastntoasthyd.com"),
+  metadataBase: new URL("https://www.roastntoastclub.com"),
   title: {
     default: "Roast N Toast | Best Restaurant & Nightclub in Hyderabad",
     template: "%s | Roast N Toast",
@@ -31,7 +45,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://roastntoasthyd.com",
+    url: "https://www.roastntoastclub.com",
     siteName: "Roast N Toast",
     images: [
       {
@@ -67,8 +81,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className="antialiased">
+      <html lang="en" suppressHydrationWarning>
+        <body className={`${pirataOne.variable} ${cinzelDecorative.variable} antialiased`}>
+          <Script
+          id="orchids-browser-logs"
+          src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/scripts/orchids-browser-logs.js"
+          strategy="afterInteractive"
+          data-orchids-project-id="1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7"
+        />
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
@@ -88,8 +108,8 @@ export default function RootLayout({
                 "@type": "LocalBusiness",
                 "name": "Roast N Toast",
                 "image": "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/55D7DFDB-95A1-4994-9227-044842B9795E-1767713898800.png",
-                "@id": "https://roastntoasthyd.com",
-                "url": "https://roastntoasthyd.com",
+                "@id": "https://www.roastntoastclub.com",
+                "url": "https://www.roastntoastclub.com",
                 "telephone": "9105550999",
                 "address": {
                   "@type": "PostalAddress",

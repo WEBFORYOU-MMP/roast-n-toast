@@ -72,18 +72,18 @@ export function Ambience() {
 
             {/* Text Side */}
             <div className={`w-full md:w-1/2 flex flex-col justify-center px-6 py-12 sm:px-12 sm:py-16 md:px-24 ${isDark ? 'bg-card' : 'bg-cream/30'}`}>
-              <motion.div
-                initial={{ opacity: 0, x: isEven ? 50 : -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-              >
-                <span className="text-primary font-display tracking-[0.4em] uppercase text-xs sm:text-sm mb-3 sm:mb-4 block">
-                  {isDark ? "The Night" : "The Day"}
-                </span>
-                <h3 className={`text-2xl sm:text-3xl md:text-6xl mb-4 sm:mb-6 md:mb-8 tracking-wider ${isDark ? 'font-display text-white' : 'font-serif text-foreground'}`}>
-                  {content.title}
-                </h3>
+                <motion.div
+                  initial={{ opacity: 0, x: isEven ? 50 : -50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                  >
+                    <span className="text-primary font-pirata tracking-[0.4em] uppercase text-xs sm:text-sm mb-3 sm:mb-4 block">
+                      {isDark ? "The Night" : "The Day"}
+                    </span>
+                    <h3 className={`text-2xl sm:text-3xl md:text-6xl mb-4 sm:mb-6 md:mb-8 tracking-wider ${isDark ? 'font-pirata text-white' : 'font-pirata text-foreground'}`}>
+                      {content.title}
+                    </h3>
                 <p className="text-sm sm:text-base md:text-xl text-muted-foreground leading-relaxed max-w-lg mb-6 sm:mb-8 md:mb-12">
                   {content.text}
                 </p>
@@ -131,18 +131,18 @@ export function Ambience() {
           {!isDark && (
             <section className="py-16 sm:py-24 bg-cream/30 border-t border-primary/10 overflow-hidden">
               <div className="max-w-7xl mx-auto px-6 mb-12 sm:mb-16">
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  className="text-center"
-                >
-                  <span className="text-primary font-display tracking-[0.4em] uppercase text-xs sm:text-sm mb-3 sm:mb-4 block">
-                    Events & Celebrations
-                  </span>
-                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-foreground mb-4">
-                    Fun Place To Host
-                  </h2>
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="text-center"
+                  >
+                    <span className="text-primary font-pirata tracking-[0.4em] uppercase text-xs sm:text-sm mb-3 sm:mb-4 block">
+                      Events & Celebrations
+                    </span>
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-pirata text-foreground mb-4">
+                      Fun Place To Host
+                    </h2>
                   <div className="h-1 w-16 sm:w-20 bg-primary/30 mx-auto" />
                 </motion.div>
               </div>

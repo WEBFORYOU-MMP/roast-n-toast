@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Roast N Toast Hyderabad | Best Restaurant & Nightclub",
     description: "Experience fine dining by day and electrifying nightlife by night at Roast N Toast Hyderabad.",
-    url: "https://roastntoasthyd.com",
+    url: "https://www.roastntoastclub.com",
     siteName: "Roast N Toast",
     images: [
       {

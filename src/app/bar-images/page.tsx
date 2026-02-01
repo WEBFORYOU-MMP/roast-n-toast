@@ -66,7 +66,7 @@ export default function BarImagesPage() {
           className="mt-32 text-center"
         >
           <motion.a
-            href="https://drive.google.com/file/d/1NIzKWFO9bac1ZV-z5AI7eOoC4rdbye1h/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1_UUIjVfWGMUTl8l16ij2vh-aqevoeh-9/view?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}

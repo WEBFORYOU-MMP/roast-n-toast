@@ -56,10 +56,54 @@ const veggies = [
     title: "Italian Heritage",
     description: "Penne Arrabiata Pasta & Spaghetti Aglio E Olio",
     image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/GHJKTYUI-1768145665787.jpeg?width=8000&height=8000&resize=contain"
-  }
-]
+    }
+  ]
+  
+  const nonVegItems = [
+    {
+      title: "Poultry Perfection",
+      description: "Cajun Spiced Chicken & Chicken Satay",
+      image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/7YUILL-1769932557658.jpeg?width=8000&height=8000&resize=contain"
+    },
+    {
+      title: "Grilled Specialties",
+      description: "BBQ Chicken Skewers & Tawa Chicken",
+      image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/76T7IY-1769932558040.jpeg?width=8000&height=8000&resize=contain"
+    },
+    {
+      title: "Rice & Biryani",
+      description: "Spicy Dum Biryani & Chicken Fried Rice",
+      image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/DSCX-1769932558596.jpeg?width=8000&height=8000&resize=contain"
+    },
+    {
+      title: "Seafood Delights",
+      description: "Apollo Fish & Fish Fingers",
+      image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/DTFGJ-1769932558324.jpeg?width=8000&height=8000&resize=contain"
+    },
+    {
+      title: "Oriental Chicken",
+      description: "Hakka Bell Pepper Chicken & Hoisin Chicken",
+      image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/EDFZX-1769932610033.jpeg?width=8000&height=8000&resize=contain"
+    },
+    {
+      title: "Prawns & Wings",
+      description: "Bang Bang Prawns & Smoked Chicken Wings",
+      image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/EFVFCD-1769932557762.jpeg?width=8000&height=8000&resize=contain"
+    },
+      {
+        title: "Classic Starters",
+        description: "Chicken Lollipop & Drums of Heaven",
+        image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/SDCXS-1769932727793.jpeg?width=8000&height=8000&resize=contain"
+      },
+      {
+        title: "Signature Non-Veg",
+        description: "Mutton Sukka & Crispy Orange Chicken",
+        image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/YUTYU-1769933047864.jpeg?width=8000&height=8000&resize=contain"
+      }
+    ]
+  
+  export function TastyVeggiesClient() {
 
-export function TastyVeggiesClient() {
     const mouseX = useMotionValue(0)
     const mouseY = useMotionValue(0)
 
@@ -132,10 +176,60 @@ export function TastyVeggiesClient() {
                 </div>
               </motion.div>
             ))}
+            </div>
           </div>
 
-          {/* Explore More Button */}
-          <motion.div 
+          <div className="max-w-7xl mx-auto px-6 pb-24 relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-6xl font-display tracking-widest mb-4">
+                DELICIOUS NON-VEG
+              </h2>
+              <div className="h-1 w-24 bg-[#B01616] mx-auto mb-6" />
+              <p className="text-xl text-zinc-400 font-light tracking-wide max-w-2xl mx-auto">
+                Indulge in our premium selection of meat and seafood, perfectly seasoned and cooked to perfection.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+              {nonVegItems.map((item, index) => (
+                <motion.div
+                  key={item.title}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="group relative bg-zinc-900/50 rounded-2xl overflow-hidden border border-zinc-800 hover:border-[#B01616]/50 transition-colors"
+                >
+                  <div className="aspect-[16/9] relative overflow-hidden">
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                  </div>
+                  
+                  <div className="p-8">
+                    <h3 className="text-2xl font-display tracking-wider mb-2 text-[#B01616] uppercase">
+                      {item.title}
+                    </h3>
+                    <p className="text-zinc-400 leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Explore More Button */}
+            <motion.div 
+
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

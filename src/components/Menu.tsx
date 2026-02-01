@@ -77,14 +77,14 @@ const menuItemsNight = [
   return (
     <section id="menu" className="py-24 px-6 bg-background transition-colors duration-1000">
       <div className="max-w-7xl mx-auto text-center">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className={`text-3xl sm:text-4xl md:text-5xl mb-12 md:mb-16 tracking-[0.1em] md:tracking-[0.2em] font-bold ${isDark ? 'font-display text-white' : 'font-serif text-foreground'}`}
-          >
-            {isDark ? "Food + drinks + music + ambience = pub" : "Roast N Toast Day Specials ."}
-          </motion.h2>
+              <motion.h2 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className={`text-3xl sm:text-4xl md:text-5xl mb-12 md:mb-16 tracking-[0.1em] md:tracking-[0.2em] font-bold ${isDark ? 'font-pirata text-white' : 'font-pirata text-foreground'}`}
+              >
+                {isDark ? "Food + drinks + music + ambience = pub" : "Roast N Toast Day Specials ."}
+              </motion.h2>
 
           <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-8 md:gap-6">
             {menuItems.map((item, index) => (
@@ -129,9 +129,9 @@ const menuItemsNight = [
                       </Link>
                   </div>
 
-                  <h3 className={`text-lg md:text-2xl mb-2 sm:mb-3 tracking-widest uppercase font-bold ${isDark ? 'font-display text-gold' : 'font-serif text-foreground'}`}>
-                    {item.title}
-                  </h3>
+                      <h3 className={`text-lg md:text-2xl mb-2 sm:mb-3 tracking-widest uppercase font-bold font-pirata ${isDark ? 'text-gold' : 'text-foreground'}`}>
+                      {item.title}
+                    </h3>
                   <p className="text-muted-foreground tracking-wide max-w-[160px] sm:max-w-[200px] text-xs sm:text-sm text-center">
                     {item.description}
                   </p>

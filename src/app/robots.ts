@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'https://roastntoasthyd.com/sitemap.xml',
+      sitemap: 'https://www.roastntoastclub.com/sitemap.xml',
   }
 }
