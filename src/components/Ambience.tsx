@@ -184,9 +184,9 @@ export function Ambience() {
         )}
 
         <div className="max-w-4xl mx-auto px-6 py-12 text-center">
-          <p className="text-sm text-muted-foreground leading-relaxed">
-            Roast N Toast is consistently ranked among the <span className="text-primary font-medium">Best restaurants to visit in Hyderabad</span> and <span className="text-primary font-medium">Top restaurants to visit in Hyderabad</span>. Whether you&apos;re looking for the <span className="text-primary font-medium">Best restaurant with bar in Hyderabad</span> or <span className="text-primary font-medium">Must visit restaurants in Hyderabad</span>, we offer an unparalleled experience. Come discover why we are a top choice for those seeking a premium <span className="text-primary font-medium">restaurant and bar</span> in the city.
-          </p>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              Roast N Toast is consistently ranked among the <span className="text-primary font-medium">Best restaurants to visit in Hyderabad</span> and <span className="text-primary font-medium">Top restaurants to visit in Hyderabad</span>. Whether you&apos;re looking for the <span className="text-primary font-medium">Best terrace restaurant in Hyderabad</span>, the <span className="text-primary font-medium">Best restaurant with bar in Hyderabad</span> or <span className="text-primary font-medium">Must visit restaurants in Hyderabad</span>, we offer an unparalleled experience. Come discover why we are a top choice for those seeking a premium <span className="text-primary font-medium">terrace restaurant and bar</span> in the city.
+            </p>
         </div>
 
       <motion.div 

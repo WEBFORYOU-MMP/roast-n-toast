@@ -58,7 +58,7 @@ export function Navbar() {
                 </div>
                   <div className="flex items-center gap-2 md:gap-4">
                     <a 
-                      href="https://wa.me/918297977877?text=Hi%2C%20I%20would%20like%20to%20make%20a%20reservation"
+                      href="https://wa.me/918297977877?text=Hi%20Roast%20N%20Toast%20Team%20%F0%9F%91%8B%0AI%E2%80%99d%20like%20to%20reserve%20a%20table.%0AKindly%20confirm%20the%20availability.%0AThank%20you%21"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="hidden lg:flex bg-[#E0B12D] text-black px-4 md:px-6 py-2 rounded-full font-bold uppercase tracking-widest text-[10px] md:text-xs hover:bg-[#E0B12D]/90 transition-all shadow-[0_0_15px_rgba(224,177,45,0.3)] hover:scale-105 active:scale-95 whitespace-nowrap"
@@ -90,7 +90,7 @@ export function Navbar() {
                     <Link href="/offers" onClick={() => setIsOpen(false)} className="hover:text-primary transition-colors">Offers</Link>
                       <Link href="/music-and-socials" onClick={() => setIsOpen(false)} className="hover:text-primary transition-colors">MUSIC SOCIALS</Link>
                       <a 
-                        href="https://wa.me/918297977877?text=Hi%2C%20I%20would%20like%20to%20make%20a%20reservation"
+                        href="https://wa.me/918297977877?text=Hi%20Roast%20N%20Toast%20Team%20%F0%9F%91%8B%0AI%E2%80%99d%20like%20to%20reserve%20a%20table.%0AKindly%20confirm%20the%20availability.%0AThank%20you%21"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="bg-[#E0B12D] text-black px-8 py-3 rounded-full font-bold uppercase tracking-widest text-sm hover:bg-[#E0B12D]/90 transition-all shadow-[0_0_15px_rgba(224,177,45,0.3)] mt-4"

@@ -7,6 +7,8 @@ export const metadata: Metadata = {
   keywords: [
     "Roast N Toast", 
     "restaurant and bar", 
+    "Terrace Restaurant",
+    "Best terrace restaurant in Hyderabad",
     "5 star restaurant in india", 
     "Best bar and restaurant in Hyderabad", 
     "Top bar and restaurant in Hyderabad", 
