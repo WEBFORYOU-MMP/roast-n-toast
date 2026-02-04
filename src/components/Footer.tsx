@@ -65,7 +65,7 @@ export function Footer() {
           <h4 className="text-lg mb-4 sm:mb-6 tracking-widest uppercase font-bold font-pirata">Hours</h4>
           <ul className="flex flex-col gap-3 text-sm">
             <li className="flex justify-between gap-4"><span>Sun - Thu:</span> <span className="text-right">12:00 PM - 11:30 PM</span></li>
-            <li className="flex justify-between gap-4"><span>Fri - Sat:</span> <span className="text-right">11:00 AM - 12:30 AM</span></li>
+            <li className="flex justify-between gap-4"><span>Fri - Sat:</span> <span className="text-right">12:00 PM - 12:30 AM</span></li>
           </ul>
         </div>
       </div>

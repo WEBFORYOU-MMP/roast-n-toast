@@ -196,10 +196,12 @@ export function Ambience() {
         className="py-12 text-center bg-background"
       >
         <Link
-          href="/ambiance"
+          href="https://wa.me/918297977877?text=Hi%20Roast%20N%20Toast%20Team%20%21%2C%20%0AI%20like%20to%20reserve%20a%20table.%0AKindly%20confirm%20the%20availability.%0AThank%20you%21"
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 sm:px-12 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg tracking-widest hover:bg-primary/90 transition-colors shadow-[0_0_20px_rgba(224,177,45,0.3)]"
         >
-          EXPLORE AMBIANCE
+          RESERVE TABLE
         </Link>
       </motion.div>
     </section>
