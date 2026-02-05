@@ -81,8 +81,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-      <html lang="en" suppressHydrationWarning>
-        <body className={`${pirataOne.variable} ${cinzelDecorative.variable} antialiased`}>
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <meta name="google-site-verification" content="v1Gulcam_hTyWhH1okQDz7k_jW93Vt7jdb9AmClRt-E" />
+      </head>
+      <body className={`${pirataOne.variable} ${cinzelDecorative.variable} antialiased`}>
           <Script
           id="orchids-browser-logs"
           src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/scripts/orchids-browser-logs.js"
