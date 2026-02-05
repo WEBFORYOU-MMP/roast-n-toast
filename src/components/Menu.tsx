@@ -105,7 +105,7 @@ const menuItemsNight = [
                     
                           <Link
                             href={item.link || "#"}
-                            className="relative h-32 w-32 xs:h-36 xs:w-36 sm:h-44 sm:w-44 md:h-40 md:w-40 lg:h-56 lg:w-56 overflow-hidden rounded-full cursor-pointer z-10 block"
+                            className="relative h-32 w-32 xs:h-36 xs:w-36 sm:h-44 sm:w-44 md:h-40 md:w-40 lg:h-56 lg:w-56 overflow-hidden rounded-full cursor-pointer z-10 block group/circle"
                           >
                         <motion.div
                           animate={{ rotate: -360 }}
@@ -118,6 +118,13 @@ const menuItemsNight = [
                             style={{ backgroundImage: `url("${item.image}")` }}
                           />
                         </motion.div>
+                        
+                        {/* Glossy "Click Here" overlay */}
+                        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                          <span className="text-white/90 font-semibold text-xs sm:text-sm tracking-wider uppercase drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] [text-shadow:_0_0_10px_rgba(255,255,255,0.5),_0_0_20px_rgba(255,255,255,0.3)] group-hover/circle:scale-110 transition-transform duration-300">
+                            Click Here
+                          </span>
+                        </div>
                         
                         <motion.div 
                           initial={{ opacity: 0 }}
