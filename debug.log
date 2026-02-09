@@ -1,0 +1,120 @@
+2026-02-09T12:42:28.183Z [console][error] Uncaught Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+      <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+        <RedirectBoundary>
+          <RedirectErrorBoundary router={{...}}>
+            <InnerLayoutRouter url="/" tree={[...]} cacheNode={{lazyData:null, ...}} segmentPath={[...]}>
+              <SegmentViewNode type="page" pagePath="/orchids-p...">
+                <SegmentTrieNode>
+                <Home>
+                  <HomeClient data-orchids-id="src/app/pa..." data-orchids-name="HomeClient">
+                    <main data-orchids-id="src/compon..." data-orchids-name="main" className="relative m...">
+                      <motion.div>
+                      <Navbar>
+                      <section>
+                      <section>
+                      <section data-orchids-id="src/compon..." data-orchids-name="section" className="relative">
+                        <Ambience data-orchids-id="src/compon..." data-orchids-name="Ambience">
+                          <section data-orchids-id="src/compon..." data-orchids-name="section" id="ambience" ...>
+                            <div data-map-index={0} data-orchids-id="src/compon..." data-orchids-name="div" ...>
+                              <div data-map-index={0} data-orchids-id="src/compon..." data-orchids-name="div" ...>
+                                <motion.div data-map-index={0} data-orchids-id="src/compon..." ...>
+                                  <div
+                                    data-map-index={0}
+                                    data-orchids-id="src/components/Ambience.tsx:63:14@ambienceData"
+                                    data-orchids-name="motion.div"
+                                    className="h-full w-full bg-cover bg-center"
+                                    style={{
++                                     backgroundImage: "url(\"https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/rend..."
++                                     transform: "scale(1.2)"
+-                                     transform: "scale(1.2)"
+-                                     background-image: "url(\"https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/ren..."
+                                    }}
+                                    ref={function useMotionRef.useCallback}
+                                  >
+                              <div
+                                data-map-index={0}
+                                data-orchids-id="src/components/Ambience.tsx:74:12@ambienceData"
+                                data-orchids-name="div"
++                               className="w-full md:w-1/2 flex flex-col justify-center px-6 py-12 sm:px-12 sm:py-16 m..."
+-                               className="w-full md:w-1/2 flex flex-col justify-center px-6 py-12 sm:px-12 sm:py-16 m..."
+                              >
+                                <motion.div data-map-index={0} data-orchids-id="src/compon..." ...>
+                                  <div data-map-index={0} data-orchids-id="src/compon..." data-orchids-name="motion.div" ...>
+                                    <span
+                                      data-map-index={0}
+                                      da... [truncated]
+2026-02-09T12:44:50.405Z [console][error] Image with src "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/55D7DFDB-95A1-4994-9227-044842B9795E-1767713898800.png?width=8000&height=8000&resize=contain" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+2026-02-09T12:45:11.854Z [console][error] Image with src "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/55D7DFDB-95A1-4994-9227-044842B9795E-1767713898800.png?width=8000&height=8000&resize=contain" was detected as the Largest Contentful Paint (LCP). Please add the "priority" property if this image is above the fold.
+Read more: https://nextjs.org/docs/api-reference/next/image#priority
+2026-02-09T12:45:11.866Z [console][error] Uncaught Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+      <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+        <RedirectBoundary>
+          <RedirectErrorBoundary router={{...}}>
+            <InnerLayoutRouter url="/" tree={[...]} cacheNode={{lazyData:null, ...}} segmentPath={[...]}>
+              <SegmentViewNode type="page" pagePath="/orchids-p...">
+                <SegmentTrieNode>
+                <Home>
+                  <HomeClient data-orchids-id="src/app/pa..." data-orchids-name="HomeClient">
+                    <main data-orchids-id="src/compon..." data-orchids-name="main" className="relative m...">
+                      <motion.div>
+                      <Navbar>
+                      <section>
+                      <section>
+                      <section data-orchids-id="src/compon..." data-orchids-name="section" className="relative">
+                        <Ambience data-orchids-id="src/compon..." data-orchids-name="Ambience">
+                          <section data-orchids-id="src/compon..." data-orchids-name="section" id="ambience" ...>
+                            <div data-map-index={0} data-orchids-id="src/compon..." data-orchids-name="div" ...>
+                              <div data-map-index={0} data-orchids-id="src/compon..." data-orchids-name="div" ...>
+                                <motion.div data-map-index={0} data-orchids-id="src/compon..." ...>
+                                  <div
+                                    data-map-index={0}
+                                    data-orchids-id="src/components/Ambience.tsx:63:14@ambienceData"
+                                    data-orchids-name="motion.div"
+                                    className="h-full w-full bg-cover bg-center"
+                                    style={{
++                                     backgroundImage: "url(\"https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/rend..."
++                                     transform: "scale(1.2)"
+-                                     transform: "scale(1.2)"
+-                                     background-image: "url(\"https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/ren..."
+                                    }}
+                                    ref={function useMotionRef.useCallback}
+                                  >
+                              <div
+                                data-map-index={0}
+                                data-orchids-id="src/components/Ambience.tsx:74:12@ambienceData"
+                                data-orchids-name="div"
++                               className="w-full md:w-1/2 flex flex-col justify-center px-6 py-12 sm:px-12 sm:py-16 m..."
+-                               className="w-full md:w-1/2 flex flex-col justify-center px-6 py-12 sm:px-12 sm:py-16 m..."
+                              >
+                                <motion.div data-map-index={0} data-orchids-id="src/compon..." ...>
+                                  <div data-map-index={0} data-orchids-id="src/compon..." data-orchids-name="motion.div" ...>
+                                    <span
+                                      data-map-index={0}
+                                      da... [truncated]
+2026-02-09T12:45:11.897Z [console][error] Image with src "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/1ce5c9de-8ddd-4715-9c1b-b453bb62ccf7/55D7DFDB-95A1-4994-9227-044842B9795E-1767713898800.png?width=8000&height=8000&resize=contain" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
