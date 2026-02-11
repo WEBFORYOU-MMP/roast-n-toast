@@ -65,8 +65,9 @@ export function Footer() {
         <div>
           <h4 className="text-lg mb-4 sm:mb-6 tracking-widest uppercase font-bold font-pirata">Quick Links</h4>
           <ul className="flex flex-col gap-3 text-sm">
-            <li><Link href="/about-us" className="hover:underline">About Us</Link></li>
-            <li><Link href="/offers" className="hover:underline">Offers</Link></li>
+              <li><Link href="/about-us" className="hover:underline">About Us</Link></li>
+              <li><Link href="/contact-us" className="hover:underline">Contact Us</Link></li>
+              <li><Link href="/offers" className="hover:underline">Offers</Link></li>
             <li><Link href="/privacy-policy" className="hover:underline">Privacy Policy</Link></li>
             <li><Link href="/terms-and-conditions" className="hover:underline">Terms &amp; Conditions</Link></li>
           </ul>

@@ -53,9 +53,10 @@ export function Navbar() {
                     <Link href="/events" className="hover:text-primary transition-colors">Events</Link>
                     <Link href="/offers" className="hover:text-primary transition-colors">Offers</Link>
                     <Link href="/music-and-socials" className="hover:text-primary transition-colors">
-                    MUSIC SOCIALS
-                  </Link>
-                </div>
+                      MUSIC SOCIALS
+                    </Link>
+                    <Link href="/contact-us" className="hover:text-primary transition-colors">Contact Us</Link>
+                  </div>
                   <div className="flex items-center gap-2 md:gap-4">
                     <a 
                       href="https://wa.me/918297977877?text=Hi%20Roast%20N%20Toast%20Team%20%21%2C%20%0AI'd%20like%20to%20reserve%20a%20table.%0AKindly%20confirm%20the%20availability.%0AThank%20you%21"
@@ -88,8 +89,9 @@ export function Navbar() {
                 <Link href="/#menu" onClick={() => setIsOpen(false)} className="hover:text-primary transition-colors">Menu</Link>
                     <Link href="/events" onClick={() => setIsOpen(false)} className="hover:text-primary transition-colors">Events</Link>
                     <Link href="/offers" onClick={() => setIsOpen(false)} className="hover:text-primary transition-colors">Offers</Link>
-                      <Link href="/music-and-socials" onClick={() => setIsOpen(false)} className="hover:text-primary transition-colors">MUSIC SOCIALS</Link>
-                        <a 
+                        <Link href="/music-and-socials" onClick={() => setIsOpen(false)} className="hover:text-primary transition-colors">MUSIC SOCIALS</Link>
+                          <Link href="/contact-us" onClick={() => setIsOpen(false)} className="hover:text-primary transition-colors">Contact Us</Link>
+                          <a 
                           href="https://wa.me/918297977877?text=Hi%20Roast%20N%20Toast%20Team%20%21%2C%20%0AI%20like%20to%20reserve%20a%20table.%0AKindly%20confirm%20the%20availability.%0AThank%20you%21"
                         target="_blank"
                         rel="noopener noreferrer"
